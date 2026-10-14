@@ -452,20 +452,72 @@ x.restore();
     if(t.link) document.getElementById('feat-link').href=t.link;
   }
 
-  // News (with graceful fallback)
-  const newsEl=document.getElementById('news');
-  if(newsEl){
-    newsEl.innerHTML='';
-    const items=(Array.isArray(data.news)&&data.news.length)? data.news.sort((a,b)=>a.date<b.date?1:-1).slice(0,6)
-      : [{date:'Nov 2025',title:'<b>SfN, San Diego, CA.</b> Leveraging Data Science to Understand Heterogeneity in Neuropsychiatric Disorders'},
-         ];
-    items.forEach(n=>{
-      const row=document.createElement('div'); row.className='news-item';
-      row.innerHTML=`<span class='news-date'>${n.date||''}</span>
-                     <span>${n.link?`<a href='${n.link}'>${n.title}</a>`: (n.title||'')}</span>`;
-      newsEl.appendChild(row);
-    });
+ // ==========================================
+// NEWS — FROM GOOGLE SHEETS
+// ==========================================
+
+const newsEl = document.getElementById('news');
+
+function formatNewsDate(value) {
+
+  if (!value) return '';
+
+  const date = new Date(value);
+
+  if (isNaN(date.getTime())) {
+    return String(value);
   }
+
+  return date.toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC'
+  });
+}
+
+if (newsEl) {
+
+  newsEl.innerHTML = '';
+
+  const items = Array.isArray(data.news)
+    ? [...data.news]
+        .sort((a, b) =>
+          new Date(b.date) - new Date(a.date)
+        )
+        .slice(0, 6)
+    : [];
+
+  items.forEach(n => {
+
+    const row = document.createElement('div');
+    row.className = 'news-item';
+
+    const date = document.createElement('span');
+    date.className = 'news-date';
+    date.textContent = formatNewsDate(n.date);
+
+    const title = document.createElement('span');
+
+    if (n.link) {
+
+      const link = document.createElement('a');
+      link.href = n.link;
+      link.textContent = n.title || '';
+      title.appendChild(link);
+
+    } else {
+
+      title.textContent = n.title || '';
+
+    }
+
+    row.append(date, title);
+    newsEl.appendChild(row);
+
+  });
+
+}
 
 // ==========================================
 // PEOPLE CARDS — FROM lab_data.json
