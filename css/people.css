@@ -691,3 +691,40 @@
     padding: 20px;
   }
 }
+/* =====================================================
+   PROFILE DETAILS — PEOPLE PAGE
+===================================================== */
+
+.people-page .profile-detail {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.people-page .profile-detail strong {
+  display: block;
+
+  color: #a88443;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  margin-bottom: 8px;
+}
+
+.people-page .profile-detail p {
+  color: #45515e;
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  margin: 0;
+
+  white-space: pre-line;
+}
+
+.people-page .member-content .social-links {
+  margin-top: 22px;
+}

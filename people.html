@@ -168,15 +168,6 @@
   <script>
     const DATA_URL = "lab_data.json";
 
-    function escapeHTML(value) {
-      return String(value ?? "").replace(/[&<>"']/g, char => ({
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        '"': "&quot;",
-        "'": "&#39;"
-      })[char]);
-    }
 
     function safeURL(value) {
       if (!value) return "";
@@ -257,92 +248,122 @@
       return links.join("");
     }
 
-    function renderPI(person) {
-      const container = document.getElementById("pi-container");
+function renderPI(person) {
 
-      const bio = person.short_bio || person.bio || "";
+  const container = document.getElementById("pi-container");
 
-      container.innerHTML = `
-        <article class="pi-card">
+  container.innerHTML = `
+    <article class="pi-card">
 
-          <div class="pi-photo">
-            ${photoHTML(person)}
+      <div class="pi-photo">
+        ${photoHTML(person)}
+      </div>
+
+      <div class="pi-content">
+
+        <div class="pi-label">
+          PRINCIPAL INVESTIGATOR
+        </div>
+
+        <h3 class="pi-name">
+          ${escapeHTML(person.name)}
+        </h3>
+
+        <div class="pi-position">
+          ${escapeHTML(person.position || person.role || "")}
+        </div>
+
+        ${person.bio || person.short_bio ? `
+          <p class="pi-bio">
+            ${escapeHTML(person.bio || person.short_bio)}
+          </p>
+        ` : ""}
+
+        ${person.research ? `
+          <div class="profile-detail">
+            <strong>Research Interests</strong>
+            <p>${escapeHTML(person.research)}</p>
           </div>
+        ` : ""}
 
-          <div class="pi-content">
-
-            <div class="pi-label">PRINCIPAL INVESTIGATOR</div>
-
-            <h3 class="pi-name">
-              ${escapeHTML(person.name)}
-            </h3>
-
-            <div class="pi-position">
-              ${escapeHTML(person.position || person.role || "")}
-            </div>
-
-            <p class="pi-bio">
-              ${escapeHTML(bio)}
-            </p>
-
-            <a class="profile-button"
-               href="${escapeHTML(profileURL(person))}">
-              View Full Profile <span aria-hidden="true">↗</span>
-            </a>
-
-            <div class="social-links">
-              ${socialLinks(person)}
-            </div>
-
+        ${person.education ? `
+          <div class="profile-detail">
+            <strong>Education & Training</strong>
+            <p>${escapeHTML(person.education)}</p>
           </div>
+        ` : ""}
 
-        </article>
-      `;
-    }
+        <div class="social-links">
+          ${socialLinks(person)}
+        </div>
 
-    function renderMembers(members) {
-      const container = document.getElementById("members-container");
-      const placeholder = document.getElementById("members-placeholder");
+      </div>
 
-      if (!members.length) {
-        placeholder.hidden = false;
-        container.innerHTML = "";
-        return;
-      }
+    </article>
+  `;
+}
 
-      placeholder.hidden = true;
+function renderMembers(members) {
 
-      container.innerHTML = members.map(person => `
-        <article class="member-card">
+  const container = document.getElementById("members-container");
+  const placeholder = document.getElementById("members-placeholder");
 
-          <div class="member-photo">
-            ${photoHTML(person)}
+  if (!members.length) {
+    placeholder.hidden = false;
+    container.innerHTML = "";
+    return;
+  }
+
+  placeholder.hidden = true;
+
+  container.innerHTML = members.map(person => `
+
+    <article class="member-card">
+
+      <div class="member-photo">
+        ${photoHTML(person)}
+      </div>
+
+      <div class="member-content">
+
+        <h3 class="member-name">
+          ${escapeHTML(person.name)}
+        </h3>
+
+        <div class="member-role">
+          ${escapeHTML(person.role || "")}
+        </div>
+
+        ${person.bio || person.short_bio ? `
+          <p class="member-bio">
+            ${escapeHTML(person.bio || person.short_bio)}
+          </p>
+        ` : ""}
+
+        ${person.research ? `
+          <div class="profile-detail">
+            <strong>Research Interests</strong>
+            <p>${escapeHTML(person.research)}</p>
           </div>
+        ` : ""}
 
-          <div class="member-content">
-
-            <h3 class="member-name">
-              ${escapeHTML(person.name)}
-            </h3>
-
-            <div class="member-role">
-              ${escapeHTML(person.role || "")}
-            </div>
-
-            <p class="member-bio">
-              ${escapeHTML(person.short_bio || person.bio || "")}
-            </p>
-
-            <a class="member-link"
-               href="${escapeHTML(profileURL(person))}">
-              View Profile ↗
-            </a>
-
+        ${person.education ? `
+          <div class="profile-detail">
+            <strong>Education & Training</strong>
+            <p>${escapeHTML(person.education)}</p>
           </div>
+        ` : ""}
 
-        </article>
-      `).join("");
-    }
+        <div class="social-links">
+          ${socialLinks(person)}
+        </div>
+
+      </div>
+
+    </article>
+
+  `).join("");
+}
 
 function renderAlumni(alumni) {
   const section = document.getElementById("alumni-section");
