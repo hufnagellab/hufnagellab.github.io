@@ -1,5 +1,1 @@
-{
-  "news": [],
-  "publications": [],
-  "people": []
-}
+{"people":[{"id":"`","name":"Daniel Hufnagel","role":"Principal Investigator","photo":"","short_bio":"","bio":"","research":"Investigating the molecular mechanisms underlying individual vulnerability and resilience in psychiatric disorders.","education":"","email":"daniel.dasilva@mssm.edu","orcid":"","scholar":"","linkedin":"","order":"","active":true}],"news":[{"id":1,"date":"2026-10-14T04:00:00.000Z","title":"New lab website","description":"Welcome to the Hufnagel Lab website!","image":"","link":"","category":"Lab News","active":true}],"publications":[{"id":"`","year":"","title":"","authors":"","journal":"","doi":"","url":"","image":"","featured":"","order":"","active":""}],"updated":"2026-10-14T20:24:09.515Z"}
