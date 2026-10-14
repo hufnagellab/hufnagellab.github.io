@@ -1,0 +1,56 @@
+name: Sync Google Sheets Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download Google Sheets data
+        env:
+          GOOGLE_SHEETS_URL: ${{ secrets.GOOGLE_SHEETS_URL }}
+        run: |
+          curl --fail --location --silent --show-error \
+            "$GOOGLE_SHEETS_URL" \
+            -o lab_data.json
+
+      - name: Validate downloaded data
+        run: |
+          python3 - <<'PY'
+          import json
+
+          with open("lab_data.json", encoding="utf-8") as f:
+              data = json.load(f)
+
+          for key in ("people", "news", "publications"):
+              if not isinstance(data.get(key), list):
+                  raise ValueError(f"{key} must be an array")
+
+          print("People:", len(data["people"]))
+          print("News:", len(data["news"]))
+          print("Publications:", len(data["publications"]))
+          PY
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add lab_data.json
+
+          if git diff --cached --quiet; then
+            echo "No changes detected"
+          else
+            git commit -m "Sync website data from Google Sheets"
+            git push
+          fi
