@@ -439,25 +439,24 @@ section.light {
 .people-grid {
   display: grid;
 
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 320px));
 
-  gap: 26px;
+  gap: 24px;
 
   align-items: start;
 }
 
 
 /* =====================================================
-   15. PEOPLE CARDS
+   15. PEOPLE CARDS — COMPACT DESIGN
    ===================================================== */
 
 .home-person-card {
   background: #fff;
-
   border: 1px solid #e7e1d6;
-  border-radius: 16px;
-
+  border-radius: 14px;
   overflow: hidden;
+  max-width: 320px;
 
   transition:
     transform 0.25s ease,
@@ -465,62 +464,53 @@ section.light {
 }
 
 .home-person-card:hover {
-  transform: translateY(-5px);
-
-  box-shadow: 0 15px 35px rgba(14, 26, 43, 0.10);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(14, 26, 43, 0.10);
 }
 
 .home-person-photo {
   display: block;
-
   width: 100%;
-  aspect-ratio: 4 / 3;
-
+  height: 180px;
   object-fit: cover;
-
   background: var(--navy);
 }
 
 .home-person-content {
-  padding: 24px;
+  padding: 18px 20px;
 }
 
 .home-person-role {
   color: #a88443;
-
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
-
-  letter-spacing: 0.06em;
-
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .home-person-name {
   font-family: "Playfair Display", Georgia, serif;
-
-  font-size: 23px;
-
+  font-size: 21px;
   color: var(--navy);
-
-  margin: 10px 0;
+  margin: 8px 0 12px;
 }
 
 .home-person-bio {
   color: #65707c;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 16px;
 
-  font-size: 14px;
-  line-height: 1.7;
-
-  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .home-person-link {
   color: #a88443;
-
   text-decoration: none;
-
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
 }
 
