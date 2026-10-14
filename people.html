@@ -1,146 +1,452 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+<html lang="en">
 
-    /* =============================
-       1. PEOPLE LIST — da Silva Lab
-       ============================= */
-    {
-      "@type": "ItemList",
-      "@id": "https://www.dasilvalab.org/#people",
-      "name": "da Silva Lab Members",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@id": "https://www.dasilvalab.org/#daniel"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "item": "https://www.dasilvalab.org/#postdoc1"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "item": "https://www.dasilvalab.org/#grad1"
-        }
-      ]
-    },
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    /* =============================
-       2. POSTDOC — EXAMPLE PERSON
-       Replace name/photo/email when real
-       ============================= */
-    {
-      "@type": "Person",
-      "@id": "https://www.dasilvalab.org/#postdoc1",
-      "name": "Postdoc Name",
-      "jobTitle": "Postdoctoral Fellow",
-      "worksFor": {
-        "@id": "https://www.dasilvalab.org/#lab"
-      },
-      "description": "Postdoctoral fellow working on synaptic physiology and CUT&RUN.",
-      "image": "https://www.dasilvalab.org/assets/people/postdoc1.jpg",
-      "email": "mailto:postdoc@example.org"
-    },
+  <title>People | Hufnagel Lab</title>
 
-    /* =============================
-       3. GRADUATE STUDENT — EXAMPLE
-       ============================= */
-    {
-      "@type": "Person",
-      "@id": "https://www.dasilvalab.org/#grad1",
-      "name": "Graduate Student",
-      "jobTitle": "PhD Student",
-      "worksFor": {
-        "@id": "https://www.dasilvalab.org/#lab"
-      },
-      "description": "PhD student developing Falcon and multi-omics integration tools.",
-      "image": "https://www.dasilvalab.org/assets/people/grad1.jpg"
+  <meta name="description"
+        content="Meet the scientists of the Hufnagel Lab at the Icahn School of Medicine at Mount Sinai.">
+
+  <link rel="canonical" href="https://www.hufnagellab.org/people.html">
+
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/people.css">
+</head>
+
+<body class="people-page">
+
+  <!-- SHARED NAVIGATION -->
+<header class="site-header">
+  <div class="container nav">
+
+    <a href="index.html" class="logo">
+      Hufnagel<span>Lab</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#research">Research</a>
+      <a href="people.html" class="active">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="joinus.html">Join Us</a>
+    </nav>
+
+  </div>
+</header>
+
+  <main>
+
+    <!-- ==========================================
+         DARK HERO
+    =========================================== -->
+
+    <section class="page-intro">
+      <div class="container">
+
+        <div class="eyebrow">OUR TEAM</div>
+
+        <h1>Meet the Lab<span class="gold-period">.</span></h1>
+
+        <p class="intro-lead">
+          The people behind the science. We bring together scientists
+          with diverse backgrounds and expertise to understand the
+          biological mechanisms of vulnerability and resilience.
+        </p>
+
+        <div class="gold-line"></div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+     PRINCIPAL INVESTIGATOR
+=========================================== -->
+
+<section class="section pi-section">
+  <div class="container">
+
+    <div class="section-topline">
+      <span class="section-number">01 / LEADERSHIP</span>
+    </div>
+
+    <h2 class="section-heading">Principal Investigator</h2>
+
+    <!-- Automatically populated from lab_data.json -->
+    <div id="pi-container">
+      <p>Loading profile...</p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ==========================================
+
+     CURRENT LAB MEMBERS
+
+=========================================== -->
+
+<section class="section members-section" id="lab-members-section">
+
+  <div class="container">
+
+    <div class="section-topline">
+
+      <span class="section-number">02 / OUR PEOPLE</span>
+
+    </div>
+
+    <h2 class="section-heading">Current Lab Members</h2>
+
+    <p class="section-description">
+
+      Different perspectives. Shared curiosity.
+
+      One commitment to understanding the brain.
+
+    </p>
+
+    <div class="members-grid" id="members-container"></div>
+
+    <p class="members-placeholder" id="members-placeholder" hidden>
+
+      Meet the rest of the team soon.
+
+    </p>
+
+  </div>
+
+</section>
+
+<!-- ==========================================
+
+     LAB ALUMNI
+
+=========================================== -->
+
+<section class="section alumni-section" id="alumni-section" hidden>
+
+  <div class="container">
+
+    <div class="section-topline">
+
+      <span class="section-number">03 / OUR COMMUNITY</span>
+
+    </div>
+
+    <h2 class="section-heading">Lab Alumni</h2>
+
+    <p class="alumni-description">
+
+      Celebrating the scientists who have contributed
+
+      to our research and continue their journeys beyond the lab.
+
+    </p>
+
+    <div class="alumni-grid" id="alumni-container"></div>
+
+  </div>
+
+</section>
+
+  </main>
+
+
+  <!-- SHARED FOOTER -->
+  <div id="site-footer"></div>
+
+
+  <!-- ==========================================
+       PEOPLE DATA
+  =========================================== -->
+
+  <script>
+    const DATA_URL = "lab_data.json";
+
+    function escapeHTML(value) {
+      return String(value ?? "").replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      })[char]);
     }
 
-  ]
+    function safeURL(value) {
+      if (!value) return "";
+
+      try {
+        const url = new URL(value, window.location.href);
+
+        if (url.protocol === "https:" || url.protocol === "http:") {
+          return url.href;
+        }
+      } catch (error) {}
+
+      return "";
+    }
+
+    function initials(name) {
+      return String(name || "")
+        .trim()
+        .split(/\s+/)
+        .map(word => word[0])
+        .filter(Boolean)
+        .slice(0, 2)
+        .join("")
+        .toUpperCase();
+    }
+
+    function photoHTML(person) {
+      const photo = safeURL(person.photo);
+
+      if (photo) {
+        return `<img src="${escapeHTML(photo)}"
+                     alt="${escapeHTML(person.name)}"
+                     loading="lazy">`;
+      }
+
+      return escapeHTML(initials(person.name));
+    }
+
+    function profileURL(person) {
+      // The PI has a dedicated, SEO-friendly page.
+      if (
+        String(person.group || "").toLowerCase() === "pi" ||
+        String(person.role || "").toLowerCase() === "pi"
+      ) {
+        return "daniel-hufnagel.html";
+      }
+
+      const id = person.slug || person.id;
+
+      return id
+        ? `profile.html?id=${encodeURIComponent(id)}`
+        : "people.html";
+    }
+
+    function socialLinks(person) {
+      const links = [];
+
+      if (person.email) {
+        links.push(
+          `<a href="mailto:${escapeHTML(person.email)}">Email ↗</a>`
+        );
+      }
+
+      if (safeURL(person.orcid)) {
+        links.push(
+          `<a href="${escapeHTML(safeURL(person.orcid))}"
+              target="_blank" rel="noopener noreferrer">ORCID ↗</a>`
+        );
+      }
+
+      if (safeURL(person.scholar)) {
+        links.push(
+          `<a href="${escapeHTML(safeURL(person.scholar))}"
+              target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>`
+        );
+      }
+
+      return links.join("");
+    }
+
+    function renderPI(person) {
+      const container = document.getElementById("pi-container");
+
+      const bio = person.short_bio || person.bio || "";
+
+      container.innerHTML = `
+        <article class="pi-card">
+
+          <div class="pi-photo">
+            ${photoHTML(person)}
+          </div>
+
+          <div class="pi-content">
+
+            <div class="pi-label">PRINCIPAL INVESTIGATOR</div>
+
+            <h3 class="pi-name">
+              ${escapeHTML(person.name)}
+            </h3>
+
+            <div class="pi-position">
+              ${escapeHTML(person.position || person.role || "")}
+            </div>
+
+            <p class="pi-bio">
+              ${escapeHTML(bio)}
+            </p>
+
+            <a class="profile-button"
+               href="${escapeHTML(profileURL(person))}">
+              View Full Profile <span aria-hidden="true">↗</span>
+            </a>
+
+            <div class="social-links">
+              ${socialLinks(person)}
+            </div>
+
+          </div>
+
+        </article>
+      `;
+    }
+
+    function renderMembers(members) {
+      const container = document.getElementById("members-container");
+      const placeholder = document.getElementById("members-placeholder");
+
+      if (!members.length) {
+        placeholder.hidden = false;
+        container.innerHTML = "";
+        return;
+      }
+
+      placeholder.hidden = true;
+
+      container.innerHTML = members.map(person => `
+        <article class="member-card">
+
+          <div class="member-photo">
+            ${photoHTML(person)}
+          </div>
+
+          <div class="member-content">
+
+            <h3 class="member-name">
+              ${escapeHTML(person.name)}
+            </h3>
+
+            <div class="member-role">
+              ${escapeHTML(person.role || "")}
+            </div>
+
+            <p class="member-bio">
+              ${escapeHTML(person.short_bio || person.bio || "")}
+            </p>
+
+            <a class="member-link"
+               href="${escapeHTML(profileURL(person))}">
+              View Profile ↗
+            </a>
+
+          </div>
+
+        </article>
+      `).join("");
+    }
+
+function renderAlumni(alumni) {
+  const section = document.getElementById("alumni-section");
+  const container = document.getElementById("alumni-container");
+
+  if (!alumni.length) {
+    section.hidden = true;
+    return;
+  }
+
+  section.hidden = false;
+
+  container.innerHTML = alumni.map(person => `
+    <article class="alumni-card">
+
+      <div class="alumni-avatar">
+        ${photoHTML(person)}
+      </div>
+
+      <div class="alumni-info">
+
+        <h3 class="alumni-name">
+          ${escapeHTML(person.name)}
+        </h3>
+
+        <div class="alumni-role">
+          ${escapeHTML(person.role || "")}
+        </div>
+
+        ${person.next_position ? `
+          <div class="alumni-next">
+            ${escapeHTML(person.next_position)}
+          </div>
+        ` : ""}
+
+      </div>
+
+    </article>
+  `).join("");
 }
-</script>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>People — NeuroLab</title><meta name="theme-color" content="#0e1a2b"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#0e1a2b;--navy-2:#0a1523;--gold:#d3a85a;--cream:#f4efe6}
-*{box-sizing:border-box}body{margin:0;background:var(--navy);color:#f7f7f5;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.6}
-.container{width:min(1100px,92vw);margin:0 auto}header{position:sticky;top:0;z-index:20;backdrop-filter:saturate(160%) blur(8px);background:linear-gradient(180deg, rgba(10,18,31,.85), rgba(10,18,31,.65));border-bottom:1px solid rgba(211,168,90,.18)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}.brand{display:flex;gap:12px;font-weight:700}
-.brand-icon{width:28px;height:28px;border-radius:8px;background:radial-gradient(80% 80% at 30% 30%, var(--gold), #a1762b 70%, #6d5326 100%)}
-.hero{padding:48px 0 20px;border-bottom:1px solid rgba(211,168,90,.18)}h1{font-family:Playfair Display,serif;margin:.4em 0}
-main{background:var(--cream);color:#111}.section{padding:42px 0 60px}
-.controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}.search,.fsel{background:#fff;color:#111;border:1px solid #e6dfd3;border-radius:10px;padding:8px 12px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border:1px solid #e7e2d8;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(17,20,24,.04)}
-.top{display:flex;gap:14px;padding:16px}.avatar{width:92px;height:92px;border-radius:14px;object-fit:cover;border:1px solid #ece6da}
-.bio{padding:0 16px 16px;display:none}.bio.show{display:block}.toggle{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-top:1px dashed #eadfcf;cursor:pointer;background:linear-gradient(180deg,#fff,#fbf9f6)}.chev{transition:transform .2s}.chev.open{transform:rotate(180deg)}
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
 
-  "name": "Daniel Almeida da Silva e Silva",
-  "alternateName": [
-    "Daniel da Silva",
-    "Daniel Almeida",
-    "Daniel Silva",
-    "Daniel da Silva e Silva",
-    "Daniel daSilva",
-    "Daniel DaSilva",
-    "Daniel Da Silva",
-    "Daniel Silva-e-Silva"
-  ],
+    async function loadPeople() {
+      try {
+        const response = await fetch(DATA_URL, {
+          cache: "no-store"
+        });
 
-  "givenName": "Daniel",
-  "familyName": "Almeida da Silva e Silva",
-  
-  "jobTitle": "Assistant Professor of Neuroscience",
-  "description": "Neuroscientist investigating molecular, epigenetic, and synaptic mechanisms underlying vulnerability and resilience in neuropsychiatric disorders.",
-  
-  "affiliation": {
-    "@type": "Organization",
-    "name": "Instituto Israelita de Ensino e Pesquisa Albert Einstein",
-    "url": "https://www.einstein.br"
-  },
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
 
-  "url": "https://www.dasilvalab.org",
-  "image": "https://scholars.mssm.edu/files-asset/204587011/0000072500101249200101.jpg?w=320&f=webp",
+        const data = await response.json();
 
-  "sameAs": [
-    "https://scholar.google.com/citations?user=gMpuW-wAAAAJ&hl=pt-BR",
-    "https://orcid.org/0000-0003-0033-3270",
-    "https://www.ncbi.nlm.nih.gov/myncbi/daniel.silva%20e%20silva.1/bibliography/public/",
-    "https://profiles.icahn.mssm.edu/daniel-almeida-da-silva-e-silva",
-    "https://www.dasilvalab.org"
-  ]
-}
-</script>
-</head><body>
-<header><div class="container nav"><a class="brand" href="index.html"><span class="brand-icon"></span><span>NeuroLab</span></a>
-<nav><ul style="display:flex;gap:24px;list-style:none;margin:0;padding:0"><li><a href="index.html#research">Research</a></li><li><a href="people.html">People</a></li><li><a href="publications.html">Publications</a></li></ul></nav></div></header>
-<section class="hero"><div class="container"><div style="color:#d3a85a;text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;font-weight:600">People</div><h1>Our Team</h1><p>An interdisciplinary group blending neuroscience, epigenomics, and computational biology.</p></div></section>
-<main><section class="container section"><div class="controls"><input id="q" class="search" type="search" placeholder="Search by name / role / keywords…" aria-label="Search people"/><select id="role" class="fsel" aria-label="Filter by role"><option value="">All roles</option></select></div><div id="grid" class="grid" aria-live="polite"></div></section></main>
-<footer><div class="container">© <span id="y"></span> NeuroLab</div></footer>
-<script>
-document.getElementById('y').textContent = new Date().getFullYear();
-async function loadData(){const r=await fetch('lab_data.json',{cache:'no-store'});return r.ok? r.json(): {people:[]}}
-function unique(a){return Array.from(new Set(a.filter(Boolean)))}
-// avatar helpers
-function initials(name){return (String(name||'').trim().split(/\s+/).map(w=>w[0]?w[0].toUpperCase():'').filter(Boolean).slice(0,2).join(''))||'NL'}
-function avatarSVG(text,size,bg='#0e1a2b',fg='#f1e9d7'){const f=Math.floor(size*0.38);const s=`<svg xmlns='http://www.w3.org/2000/svg' width='${size}' height='${size}'><rect width='100%' height='100%' rx='14' fill='${bg}'/><text x='50%' y='58%' text-anchor='middle' font-family='Inter, Arial' font-size='${f}' fill='${fg}' font-weight='700'>${text}</text></svg>`;return 'data:image/svg+xml;utf8,'+encodeURIComponent(s)}
-function avatarSrc(p,size){return (p&&p.photo&&p.photo.trim()!=='')?p.photo:avatarSVG(initials(p&&p.name),size||92)}
-function slug(s){return String(s||'person').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}
-function buildCard(p){const c=document.createElement('article');c.className='card';const email=p.email?`<a href="mailto:${p.email}">${p.email}</a>`:'';const links=[p.scholar?`<a href="${p.scholar}">Scholar</a>`:'',p.github?`<a href="${p.github}">GitHub</a>`:'',p.twitter?`<a href="${p.twitter}">X/Twitter</a>`:''].filter(Boolean).join(' · ');c.innerHTML=`<div class="top"><img class="avatar" src="${avatarSrc(p,92)}" alt="${p.name}" width="92" height="92"/><div><div style="font-weight:700">${p.name}</div><div>${p.role||''}</div><div style="color:#6b7280;font-size:.92rem">${email}${email&&links?' · ':''}${links}</div></div></div><div class="toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="bio-${slug(p.name)}"><span>Read bio</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div id="bio-${slug(p.name)}" class="bio" hidden>${p.bio||'<em>No bio available.</em>'}</div>`;const t=c.querySelector('.toggle');const b=c.querySelector('.bio');const v=c.querySelector('.chev');function oc(){const open=b.classList.toggle('show');b.hidden=!open;t.setAttribute('aria-expanded',String(open));v.classList.toggle('open',open);t.querySelector('span').textContent=open?'Hide bio':'Read bio'}t.addEventListener('click',oc);t.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();oc();}});return c}
-(async function(){const data=await loadData();const people=Array.isArray(data.people)?data.people.slice():[];const roles=unique(people.map(p=>p.role));const rSel=document.getElementById('role');roles.forEach(r=>{const o=document.createElement('option');o.value=o.textContent=r;rSel.appendChild(o)});const grid=document.getElementById('grid');function render(){const q=document.getElementById('q').value.toLowerCase().trim();const role=rSel.value;grid.innerHTML='';people.filter(p=>!role||p.role===role).filter(p=>{const blob=`${p.name||''} ${p.role||''} ${p.bio||''}`.toLowerCase();return !q||blob.includes(q)}).forEach(p=>grid.appendChild(buildCard(p)));if(!grid.children.length){grid.innerHTML='<div style="grid-column:1/-1;padding:16px;background:#fff;border:1px solid #e7e2d8;border-radius:12px">No people match your filters.</div>'}}rSel.addEventListener('change',render);document.getElementById('q').addEventListener('input',render);render();})();</script>
-</body></html>
+        const people = (data.people || [])
+          .filter(person =>
+            person.active === true ||
+            String(person.active).toLowerCase() === "true"
+          )
+          .sort((a, b) =>
+            (Number(a.order) || 999) -
+            (Number(b.order) || 999)
+          );
+
+        const pi = people.find(person => {
+          const group = String(person.group || "").toLowerCase();
+          const role = String(person.role || "").toLowerCase();
+
+          return (
+            group === "pi" ||
+            group === "principal investigator" ||
+            role === "pi" ||
+            role.includes("principal investigator")
+          );
+        });
+
+        if (pi) {
+          renderPI(pi);
+        }
+
+        // Separate alumni from current lab members
+const alumni = people.filter(person =>
+  String(person.group || "").trim().toLowerCase() === "alumni"
+);
+
+const currentMembers = people.filter(person =>
+  person !== pi &&
+  String(person.group || "").trim().toLowerCase() !== "alumni"
+);
+
+// Render each section
+renderMembers(currentMembers);
+renderAlumni(alumni);
+
+      } catch (error) {
+        // Keep the fallback PI card visible.
+        console.warn("People data unavailable:", error);
+      }
+    }
+
+    loadPeople();
+  </script>
+
+  <!-- SHARED HEADER / FOOTER LOADER -->
+<script src="js/components.js"></script>
+
+</body>
+</html>

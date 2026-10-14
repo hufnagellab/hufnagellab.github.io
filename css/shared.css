@@ -1,0 +1,174 @@
+/* =====================================================
+   HUFNAGEL LAB — SHARED STYLES
+===================================================== */
+
+:root {
+  --navy: #0e1a2b;
+  --navy-2: #0a1523;
+  --gold: #d3a85a;
+  --cream: #f4efe6;
+  --ink: #0f243a;
+
+  --text: #1b2838;
+  --muted: #65707c;
+  --border: #e7e1d6;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--navy);
+  color: #f7f7f5;
+  font-family: Inter, system-ui, -apple-system,
+               Segoe UI, Roboto, Helvetica, Arial;
+  line-height: 1.6;
+}
+
+/* Shared container */
+
+.container {
+  width: min(1150px, 92vw);
+  margin: 0 auto;
+}
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+#site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header {
+  background: var(--navy);
+  color: var(--white);
+  border-bottom: 1px solid rgba(211,168,90,.18);
+}
+
+.site-header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 82px;
+  gap: 24px;
+}
+
+.site-header .logo {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--cream);
+}
+
+.site-header .logo span {
+  color: var(--gold);
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.site-header nav a {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color .2s;
+}
+
+.site-header nav a:hover,
+.site-header nav a.active {
+  color: var(--gold);
+}
+
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+h2 {
+  color: var(--ink);
+}
+
+/* =====================================================
+   SHARED BUTTON
+===================================================== */
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 999px;
+
+  border: 1px solid rgba(241,204,125,.6);
+
+  background: linear-gradient(
+    180deg,
+    rgba(241,204,125,.18),
+    rgba(211,168,90,.1)
+  );
+
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: .02em;
+  transition: all .25s ease;
+}
+
+.cta:hover {
+  background: rgba(241,204,125,.22);
+  box-shadow: 0 0 12px rgba(241,204,125,.35);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+  background: var(--navy-2);
+  color: #ddd6c5;
+  padding: 35px 0;
+  font-size: 13px;
+}
+
+.site-footer .footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .site-header .nav {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .site-header nav {
+    justify-content: center;
+    gap: 16px;
+  }
+
+}

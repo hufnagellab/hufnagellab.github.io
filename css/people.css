@@ -1,0 +1,693 @@
+/* =====================================================
+   HUFNAGEL LAB — PEOPLE PAGE
+   Dark / Light / Dark Design
+===================================================== */
+
+
+/* =====================================================
+   PAGE BASE
+===================================================== */
+
+.people-page {
+  background: var(--cream);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.people-page main {
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   DARK HERO
+===================================================== */
+
+.people-page .page-intro {
+  position: relative;
+
+  background:
+    radial-gradient(
+      ellipse at 85% 20%,
+      rgba(211,168,90,.12),
+      transparent 50%
+    ),
+    linear-gradient(
+      135deg,
+      #0e1a2b 0%,
+      #14283e 65%,
+      #0a1523 100%
+    );
+
+  padding: 100px 0 105px;
+
+  border-bottom: 1px solid rgba(211,168,90,.25);
+}
+
+.people-page .page-intro::after {
+  content: "";
+  position: absolute;
+  right: -100px;
+  top: -150px;
+
+  width: 600px;
+  height: 600px;
+
+  border: 1px solid rgba(211,168,90,.08);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.people-page .eyebrow {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.people-page .page-intro h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(48px, 6vw, 76px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -.03em;
+
+  margin: 18px 0 24px;
+  max-width: none;
+
+  color: var(--cream);
+}
+
+.people-page .gold-period {
+  color: var(--gold);
+}
+
+.people-page .intro-lead {
+  max-width: 720px;
+
+  font-size: 18px;
+  line-height: 1.85;
+
+  color: rgba(244,239,230,.75);
+
+  margin: 0;
+}
+
+.people-page .gold-line {
+  width: 65px;
+  height: 3px;
+  background: var(--gold);
+  margin-top: 35px;
+}
+
+
+/* =====================================================
+   SECTION STRUCTURE
+===================================================== */
+
+.people-page .section {
+  padding: 85px 0 105px;
+}
+
+.people-page .section-topline {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 15px;
+}
+
+.people-page .section-number {
+  color: #a88443;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.people-page .section-heading {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 3.5vw, 42px);
+  font-weight: 700;
+  line-height: 1.2;
+
+  margin: 0 0 40px;
+
+  color: var(--navy);
+}
+
+
+/* =====================================================
+   PI SECTION — CREAM
+===================================================== */
+
+.people-page .pi-section {
+  position: relative;
+  background: var(--cream);
+}
+
+.people-page .pi-card {
+  display: grid;
+  grid-template-columns: 330px minmax(0, 1fr);
+
+  background: #ffffff;
+
+  border: 1px solid rgba(211,168,90,.25);
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 20px 50px rgba(14,26,43,.10);
+
+  transition: box-shadow .3s ease;
+}
+
+.people-page .pi-card:hover {
+  box-shadow: 0 25px 60px rgba(14,26,43,.14);
+}
+
+
+/* PI PHOTO */
+
+.people-page .pi-photo {
+  min-height: 390px;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      #294764,
+      var(--navy) 75%
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--cream);
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 90px;
+  font-weight: 700;
+
+  overflow: hidden;
+}
+
+.people-page .pi-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+
+  object-fit: cover;
+  object-position: center 25%;
+
+  display: block;
+}
+
+
+/* PI CONTENT */
+
+.people-page .pi-content {
+  padding: 48px 52px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.people-page .pi-label {
+  color: #a88443;
+
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.people-page .pi-name {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 3vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+
+  color: var(--navy);
+
+  margin: 12px 0 10px;
+}
+
+.people-page .pi-position {
+  color: var(--muted);
+
+  font-size: 15px;
+  line-height: 1.65;
+
+  margin-bottom: 22px;
+}
+
+.people-page .pi-bio {
+  color: #45515e;
+
+  max-width: 650px;
+
+  font-size: 15px;
+  line-height: 1.85;
+
+  margin: 0 0 28px;
+}
+
+
+/* PROFILE BUTTON */
+
+.people-page .profile-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  padding: 13px 24px;
+
+  background: var(--navy);
+  color: #ffffff;
+
+  border: 1px solid var(--navy);
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition:
+    background .25s ease,
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.people-page .profile-button:hover {
+  background: var(--navy-2);
+  color: var(--gold);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(14,26,43,.16);
+}
+
+
+/* SOCIAL LINKS */
+
+.people-page .social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+
+  margin-top: 26px;
+}
+
+.people-page .social-links a {
+  color: #a88443;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.people-page .social-links a:hover {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+
+/* =====================================================
+   LAB MEMBERS — DARK NAVY
+===================================================== */
+
+.people-page .members-section {
+  background:
+    radial-gradient(
+      ellipse at 90% 10%,
+      rgba(211,168,90,.07),
+      transparent 45%
+    ),
+    linear-gradient(
+      180deg,
+      #0e1a2b,
+      #0a1523
+    );
+
+  border-top: 1px solid rgba(211,168,90,.2);
+}
+
+.people-page .members-section .section-number {
+  color: var(--gold);
+}
+
+.people-page .members-section .section-heading {
+  color: var(--cream);
+  margin-bottom: 15px;
+}
+
+.people-page .section-description {
+  color: rgba(244,239,230,.65);
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  margin: 0 0 45px;
+}
+
+.people-page .members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+
+/* MEMBER CARD */
+
+.people-page .member-card {
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(211,168,90,.2);
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow: 0 12px 35px rgba(0,0,0,.18);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.people-page .member-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 20px 45px rgba(0,0,0,.3);
+}
+
+
+/* MEMBER PHOTO */
+
+.people-page .member-photo {
+  height: 275px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #203a55,
+      var(--navy)
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--cream);
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 65px;
+  font-weight: 700;
+
+  overflow: hidden;
+}
+
+.people-page .member-photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 25%;
+
+  display: block;
+}
+
+
+/* MEMBER CONTENT */
+
+.people-page .member-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  flex: 1;
+  padding: 26px;
+}
+
+.people-page .member-name {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  color: var(--navy);
+
+  margin: 0 0 6px;
+}
+
+.people-page .member-role {
+  color: #a88443;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  margin-bottom: 18px;
+}
+
+.people-page .member-bio {
+  color: var(--muted);
+
+  font-size: 14px;
+  line-height: 1.75;
+
+  margin: 0 0 22px;
+}
+
+.people-page .member-link {
+  margin-top: auto;
+
+  color: var(--navy);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.people-page .member-link:hover {
+  color: #a88443;
+}
+
+
+/* PLACEHOLDER */
+
+.people-page .members-placeholder {
+  padding: 32px;
+
+  border: 1px dashed rgba(211,168,90,.3);
+  border-radius: 14px;
+
+  background: rgba(255,255,255,.035);
+
+  color: rgba(244,239,230,.65);
+
+  font-size: 15px;
+  text-align: center;
+}
+
+.people-page .members-placeholder[hidden] {
+  display: none;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .people-page .pi-card {
+    grid-template-columns: 260px minmax(0,1fr);
+  }
+
+  .people-page .pi-content {
+    padding: 35px;
+  }
+
+  .people-page .members-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .people-page .page-intro {
+    padding: 70px 0 80px;
+  }
+
+  .people-page .page-intro h1 {
+    font-size: clamp(42px, 10vw, 56px);
+  }
+
+  .people-page .intro-lead {
+    font-size: 16px;
+  }
+
+  .people-page .section {
+    padding: 65px 0 80px;
+  }
+
+  .people-page .section-heading {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+
+  .people-page .pi-card {
+    grid-template-columns: 1fr;
+  }
+
+  .people-page .pi-photo {
+    min-height: 0;
+    height: 330px;
+  }
+
+  .people-page .pi-photo img {
+    min-height: 0;
+    height: 100%;
+  }
+
+  .people-page .pi-content {
+    padding: 30px;
+  }
+
+  .people-page .pi-name {
+    font-size: 30px;
+  }
+
+  .people-page .members-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .people-page .member-photo {
+    height: 300px;
+  }
+
+}
+/* =====================================================
+   ALUMNI SECTION
+===================================================== */
+
+.people-page .alumni-section {
+  background: var(--cream);
+  padding: 85px 0 105px;
+}
+
+.people-page .alumni-description {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: -20px 0 40px;
+}
+
+.people-page .alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.people-page .alumni-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 24px;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.people-page .alumni-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(14,26,43,.08);
+}
+
+.people-page .alumni-avatar {
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--navy);
+  border-radius: 12px;
+
+  color: var(--cream);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+
+  overflow: hidden;
+}
+
+.people-page .alumni-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.people-page .alumni-name {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 19px;
+  color: var(--navy);
+  margin: 0 0 4px;
+}
+
+.people-page .alumni-role {
+  color: #a88443;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.people-page .alumni-next {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .people-page .alumni-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .people-page .alumni-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .people-page .alumni-card {
+    padding: 20px;
+  }
+}

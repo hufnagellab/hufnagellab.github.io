@@ -2,18 +2,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script type="application/ld+json">
+
+  <link rel="canonical" href="https://www.hufnagellab.org/">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/home.css">
+
+ <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
-
-    /* ============================
-       1. PERSON / RESEARCHER
-       ============================ */
     {
       "@type": "Person",
-      "@id": "https://www.dasilvalab.org/#daniel",
-      "name": "Daniel Almeida da Silva e Silva",
+      "@id": "https://www.hufnagellab.org/#daniel",
+      "name": "Daniel Silva Hufnagel",
+      "givenName": "Daniel",
+      "familyName": "Hufnagel",
       "alternateName": [
         "Daniel da Silva",
         "Daniel Almeida",
@@ -22,45 +25,48 @@
         "Daniel daSilva",
         "Daniel DaSilva",
         "Daniel Da Silva",
-        "Daniel Silva-e-Silva"
+        "Daniel Silva-e-Silva",
+        "Daniel Hufnagel"
       ],
-      "givenName": "Daniel",
-      "familyName": "Almeida da Silva e Silva",
+      "honorificSuffix": "PhD",
       "jobTitle": "Assistant Professor of Neuroscience",
-      "description": "Neuroscientist investigating molecular, epigenetic, and synaptic mechanisms underlying vulnerability and resilience in neuropsychiatric disorders.",
+      "description": "Daniel Silva Hufnagel (previously known as Daniel da Silva and Daniel da Silva e Silva) is a neuroscientist and Assistant Professor of Neuroscience at the Icahn School of Medicine at Mount Sinai. His research investigates the molecular, epigenetic, and synaptic mechanisms underlying individual vulnerability and resilience in psychiatric disorders, with a particular focus on alcohol use disorder.",
+      "url": "https://www.hufnagellab.org/",
+      "image": "https://scholars.mssm.edu/files-asset/204587011/0000072500101249200101.jpg?w=320&f=webp",
       "affiliation": {
-        "@id": "https://www.dasilvalab.org/#einstein"
+        "@id": "https://www.hufnagellab.org/#mountsinai"
       },
       "worksFor": {
-        "@id": "https://www.dasilvalab.org/#lab"
+        "@id": "https://www.hufnagellab.org/#mountsinai"
       },
-      "url": "https://www.dasilvalab.org",
-      "image": "https://scholars.mssm.edu/files-asset/204587011/0000072500101249200101.jpg?w=320&f=webp",
       "sameAs": [
         "https://scholar.google.com/citations?user=gMpuW-wAAAAJ&hl=pt-BR",
         "https://orcid.org/0000-0003-0033-3270",
         "https://www.ncbi.nlm.nih.gov/myncbi/daniel.silva%20e%20silva.1/bibliography/public/",
-        "https://profiles.icahn.mssm.edu/daniel-almeida-da-silva-e-silva",
-        "https://www.dasilvalab.org"
-      ]
+        "https://profiles.icahn.mssm.edu/daniel-hufnagel"
+      ],
+      "subjectOf": {
+  "@type": "ProfilePage",
+  "url": "https://profiles.icahn.mssm.edu/daniel-almeida-da-silva-e-silva",
+  "name": "Daniel Silva Hufnagel — Mount Sinai Faculty Profile",
+  "about": {
+    "@id": "https://www.hufnagellab.org/#daniel"
+  }
+}
     },
 
-    /* ============================
-       2. LAB ORGANIZATION
-       ============================ */
     {
       "@type": "ResearchOrganization",
-      "@id": "https://www.dasilvalab.org/#lab",
-      "name": "da Silva Lab",
-      "description": "Research laboratory studying molecular, epigenetic, and synaptic mechanisms underlying vulnerability and resilience in psychiatric disorders.",
-      "url": "https://www.dasilvalab.org",
+      "@id": "https://www.hufnagellab.org/#lab",
+      "name": "Hufnagel Lab",
+      "description": "The Hufnagel Lab, led by Daniel Silva Hufnagel at the Icahn School of Medicine at Mount Sinai, investigates molecular, epigenetic, and synaptic mechanisms underlying individual vulnerability and resilience in psychiatric disorders.",
+      "url": "https://www.hufnagellab.org/",
       "founder": {
-        "@id": "https://www.dasilvalab.org/#daniel"
+        "@id": "https://www.hufnagellab.org/#daniel"
       },
       "parentOrganization": {
-        "@id": "https://www.dasilvalab.org/#einstein"
+        "@id": "https://www.hufnagellab.org/#mountsinai"
       },
-      "areaServed": "International",
       "keywords": [
         "Neuroscience",
         "Epigenomics",
@@ -69,225 +75,95 @@
         "CUT&RUN",
         "Addiction",
         "Alcohol Use Disorder",
-        "Computational biology",
-        "Machine learning"
+        "Computational Biology",
+        "Machine Learning"
       ]
     },
 
-    /* ============================
-       3. PARENT ORGANIZATION
-       ============================ */
     {
       "@type": "Organization",
-      "@id": "https://www.dasilvalab.org/#einstein",
-      "name": "Instituto Israelita de Ensino e Pesquisa Albert Einstein",
-      "url": "https://www.einstein.br",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Albert-einstein-hospital-seeklogo.svg",
+      "@id": "https://www.hufnagellab.org/#mountsinai",
+      "name": "Icahn School of Medicine at Mount Sinai",
+      "url": "https://icahn.mssm.edu/",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "São Paulo",
-        "addressRegion": "SP",
-        "addressCountry": "Brazil"
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "addressCountry": "US"
       }
     },
 
-    /* ============================
-       4. WEBSITE SCHEMA
-       ============================ */
     {
       "@type": "WebSite",
-      "@id": "https://www.dasilvalab.org/#website",
-      "url": "https://www.dasilvalab.org",
-      "name": "da Silva Lab",
+      "@id": "https://www.hufnagellab.org/#website",
+      "url": "https://www.hufnagellab.org/",
+      "name": "Hufnagel Lab",
+      "alternateName": "Hufnagel Laboratory",
+      "description": "Official website of the Hufnagel Lab, led by neuroscientist Daniel Silva Hufnagel at the Icahn School of Medicine at Mount Sinai.",
       "publisher": {
-        "@id": "https://www.dasilvalab.org/#lab"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.dasilvalab.org/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
+        "@id": "https://www.hufnagellab.org/#lab"
       }
     },
 
-    /* ============================
-       5. WEBPAGE SCHEMA (HOMEPAGE)
-       ============================ */
     {
       "@type": "WebPage",
-      "@id": "https://www.dasilvalab.org/#home",
-      "url": "https://www.dasilvalab.org",
-      "name": "da Silva Lab — Decoding the Molecular Architecture of Vulnerability and Resilience",
+      "@id": "https://www.hufnagellab.org/#home",
+      "url": "https://www.hufnagellab.org/",
+      "name": "Hufnagel Lab — Decoding the Molecular Architecture of Vulnerability and Resilience",
+      "description": "The Hufnagel Lab at the Icahn School of Medicine at Mount Sinai integrates physiology, genetic manipulation, cell type-specific omics, and computational modeling to reveal the biological basis of vulnerability and resilience in the brain.",
       "isPartOf": {
-        "@id": "https://www.dasilvalab.org/#website"
+        "@id": "https://www.hufnagellab.org/#website"
       },
-      "about": {
-        "@id": "https://www.dasilvalab.org/#lab"
-      },
-      "primaryImageOfPage": "https://www.dasilvalab.org/assets/header-image.jpg",
-      "description": "The da Silva Lab integrates physiology, genetic manipulation, cell type–specific omics, and computational modeling to reveal the biological basis of vulnerability and resilience in the brain."
+      "about": [
+        {
+          "@id": "https://www.hufnagellab.org/#lab"
+        },
+        {
+          "@id": "https://www.hufnagellab.org/#daniel"
+        }
+      ],
+      "mainEntity": {
+        "@id": "https://www.hufnagellab.org/#lab"
+      }
     }
-
   ]
 }
 </script>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>da Silva lab — Decoding Molecular Signatures in Psychiatric Disorders</title>
+<title>da Hufnagel lab — Decoding Molecular Signatures in Psychiatric Disorders</title>
 <meta name="theme-color" content="#0e1a2b"/>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-<style>
-  
-  .affiliation-block {
-  position: absolute;
-  top: -160px;              /* Adjusted so it sits nicely above social icons */
-  right: 10px;
-  z-index: 10;              /* ABOVE social icons */
-  
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
 
-  background: rgba(14, 26, 43, 0.65);
-  padding: 12px 16px;
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
-}
-
-.affiliation-text {
-  color: #f1e9d7;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-align: right;
-}
-
-.affiliation-logos {
-  display: flex;
-  gap: 12px;
-}
-
-.affiliation-logos img {
-  height: 32px;
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
-  transition: opacity .25s ease;
-}
-
-.affiliation-logos img:hover {
-  opacity: 1;
-}
-
-:root{--navy:#0e1a2b;--navy-2:#0a1523;--gold:#d3a85a;--cream:#f4efe6;--ink:#0f243a}
-*{box-sizing:border-box}
-body{margin:0;background:var(--navy);color:#f7f7f5;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.6}
-
-/* Header */
-.container{width:min(1150px,92vw);margin:0 auto}
-header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(160%) blur(8px);
-  background:linear-gradient(180deg, rgba(10,18,31,.85), rgba(10,18,31,.65));
-  border-bottom:1px solid rgba(211,168,90,.18)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
-.brand{display:flex;align-items:center;gap:12px;font-weight:700;color:#fff;text-decoration:none}
-.brand:hover{color:var(--gold)}
-.brand-icon{width:28px;height:28px;border-radius:8px;
-  background:radial-gradient(80% 80% at 30% 30%, var(--gold), #a1762b 70%, #6d5326 100%)}
-nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}
-nav a{text-decoration:none;color:#fff;opacity:.9}
-nav a:hover{opacity:1;color:var(--gold)}
-
-/* Hero */
-.hero{position:relative}
-.hero::before{content:'';position:absolute;inset:0;
-  background:linear-gradient(100deg, rgba(14,26,43,0.94) 40%, transparent 100%);z-index:0}
-.hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(40px,8vw,80px);
-  align-items:center;padding:clamp(60px,8vw,100px) 0}
-.hero-inner>div:first-child{position:relative;z-index:1}
-.kicker{color:var(--gold);text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;font-weight:600}
-h1{font-family:Playfair Display,serif;font-weight:700;line-height:1.15;margin:.35em 0 .45em;
-  font-size:clamp(2rem,5.6vw,3.4rem);max-width:20ch;color:#fff}
-.lead{max-width:60ch;font-size:1.05rem;line-height:1.7;color:rgba(255,255,255,.88);margin-bottom:1.4em}
-.cta{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;
-  border:1px solid rgba(241,204,125,.6);background:linear-gradient(180deg, rgba(241,204,125,.18), rgba(211,168,90,.1));
-  color:var(--gold);font-weight:600;text-decoration:none;letter-spacing:.02em;transition:all .25s ease}
-.cta:hover{background:rgba(241,204,125,.22);box-shadow:0 0 12px rgba(241,204,125,.35);color:#fff;transform:translateY(-1px)}
-
-/* Visual box (canvas + neuron + icons) */
-.visual{position:relative;height:400px;border-radius:18px;
-  background:linear-gradient(180deg, var(--navy-2), #0d2136);
-  box-shadow:inset 0 0 0 1px rgba(241,204,125,.15),0 10px 40px rgba(0,0,0,.35);overflow:visible}
-#constellation{position:absolute;inset:0;width:100%;height:100%}
-#neuron{position:absolute;width:min(56%,540px);right:-2%;top:-6%;opacity:.9}
-
-/* Social icons over the visual */
-.social-icons{position:absolute;top:-55px;right:10px;display:flex;gap:18px;z-index:5;
-  background:rgba(14,26,43,.55);backdrop-filter:blur(8px);
-  padding:10px 14px;box-shadow:0 4px 16px rgba(0,0,0,.4)}
-.social-icons svg{width:24px;height:24px;opacity:.85;transition:all .25s ease}
-.social-icons svg:hover{opacity:1;transform:scale(1.15);filter:drop-shadow(0 0 6px rgba(241,204,125,.8))}
-
-/* Sections */
-section.light{background:var(--cream);color:#111}
-.section-pad{padding:24px 0}
-h2{font-family:Playfair Display,serif;color:var(--ink)}
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.tile{background:#fff;border:1px solid #e7e2d8;border-radius:18px;padding:20px}
-.dark-strip{background:linear-gradient(180deg, #0e1a2b, #0b1c2d);
-  border-top:1px solid rgba(211,168,90,.18);border-bottom:1px solid rgba(211,168,90,.14)}
-.grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:34px}
-.news{display:grid;gap:14px}
-.news-item{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:10px 0;border-bottom:1px dashed rgba(241,204,125,.22)}
-.news-date{width:7.2ch;color:#d9c8a7}
-
-.people-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
-  align-items: start;
-}
-
-@media (max-width: 900px) {
-  .people-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .people-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-footer{background:#0a1523;color:#ddd6c5;padding:32px 0}
-
-/* Responsive */
-@media (max-width:820px){
-  .hero-inner{grid-template-columns:1fr;text-align:center}
-  .visual{order:-1;height:320px;margin-bottom:30px}
-  h1{max-width:18ch}
-}
-</style>
 </head>
 
 <body>
-<header>
+  <!-- ==========================================
+     MAIN NAVIGATION
+=========================================== -->
+
+<header class="site-header">
   <div class="container nav">
-    <a class="brand" href="#"><span class="brand-icon"></span><span>da Silva lab</span></a>
-    <nav>
-      <ul>
-        <li><a href="#people">People</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="#">Publications</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="joinus.html">Join Us</a></li>
-      </ul>
+
+    <a href="index.html" class="logo">
+      Hufnagel<span>Lab</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="index.html#research">Research</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="joinus.html">Join Us</a>
     </nav>
+
   </div>
 </header>
+
 
 <main class="hero">
   <div class="container hero-inner">
@@ -302,20 +178,15 @@ footer{background:#0a1523;color:#ddd6c5;padding:32px 0}
 
    
 
+<div class="hero-visual-wrapper">
+
   <div class="visual" aria-hidden="true">
 
-  <!-- Affiliation block -->
-  <div class="affiliation-block">
-    <div class="affiliation-text">
-      Albert Einstein Israelite Hospital<br>
-      Icahn School of Medicine at Mount Sinai
-    </div>
 
-  </div>
 
   <!-- Social icons -->
   <div class="social-icons">
-    <a href="https://x.com/neurodasilva" target="_blank" rel="noopener" aria-label="X">
+    <a href="https://x.com/neurohufnagel" target="_blank" rel="noopener" aria-label="X">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#f7f7f5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
         <path d="M3 3l18 18M3 21L21 3"/>
       </svg>
@@ -327,36 +198,121 @@ footer{background:#0a1523;color:#ddd6c5;padding:32px 0}
       </svg>
     </a>
 
-    <a href="https://github.com/dasilvalab" target="_blank" rel="noopener" aria-label="GitHub">
+    <a href="https://github.com/hufnagellab" target="_blank" rel="noopener" aria-label="GitHub">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f7f7f5">
         <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.4 7.86 10.94.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.38-3.88-1.38-.53-1.36-1.29-1.73-1.29-1.73-1.06-.72.08-.71.08-.71 1.18.08 1.8 1.21 1.8 1.21 1.04 1.78 2.73 1.26 3.4.97.11-.76.41-1.26.74-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.19-3.11-.12-.29-.52-1.45.11-3.03 0 0 .97-.31 3.18 1.18.93-.26 1.93-.39 2.92-.39s1.99.13 2.92.39c2.21-1.49 3.18-1.18 3.18-1.18.63 1.58.23 2.74.11 3.03.74.81 1.19 1.85 1.19 3.11 0 4.43-2.69 5.4-5.25 5.68.43.37.81 1.1.81 2.22 0 1.6-.02 2.89-.02 3.28 0 .3.21.66.8.55A10.5 10.5 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/>
       </svg>
     </a>
   </div>
 
-  <canvas id="constellation"></canvas>
+<canvas id="constellation"></canvas>
+<canvas id="code-stream"></canvas>
 
-  <svg id="neuron" viewBox="0 0 600 600" fill="none" stroke="#e9c576" stroke-width="1.2">
-    <circle cx="300" cy="300" r="54" fill="#f2d89a" opacity=".25"/>
-    <path d="M300 246c-8 40-6 64 0 108"/>
-    <path d="M300 254c22-40 56-64 120-86"/>
-    <path d="M300 254c-24-34-70-48-128-60"/>
-    <path d="M300 316c40 18 84 42 140 98"/>
-    <path d="M300 316c-38 22-90 30-168 52"/>
-    <path d="M300 330c-12 46-10 86-6 134"/>
-    <path d="M300 330c20 26 48 48 90 66"/>
-    <path d="M300 300c-30 6-52 10-88 0"/>
-  </svg>
+<svg id="neuron"
+     viewBox="0 0 600 600"
+     fill="none"
+     stroke="#F4EFE6"
+     stroke-width="1.2"
+     stroke-linecap="round"
+     stroke-linejoin="round">
 
-</div>
+  <!-- CELL BODY -->
+  <circle cx="300" cy="220" r="42"
+          fill="#F4EFE6"
+          opacity=".22"/>
+
+  <!-- DENDRITES -->
+  <g opacity=".85">
+
+    <path d="M300 190
+             C280 145 250 110 190 85
+             C160 70 140 55 125 30"/>
+
+    <path d="M300 190
+             C325 145 360 115 415 90
+             C450 75 470 55 490 25"/>
+
+    <path d="M285 220
+             C235 205 190 190 140 160
+             C110 145 90 120 75 95"/>
+
+    <path d="M315 220
+             C365 210 415 195 465 165
+             C490 150 515 125 535 100"/>
+
+    <path d="M285 240
+             C250 265 220 280 175 290"/>
+
+    <path d="M315 240
+             C350 260 390 275 430 285"/>
+
+  </g>
+
+  <!-- AXON: LONG CURVED PROJECTION -->
+  <g stroke="#F4EFE6"
+     stroke-width="1.5"
+     opacity=".9">
+
+    <!-- Axon hillock and main axon -->
+    <path d="
+      M300 255
+      C295 290 285 325 260 355
+      C225 395 180 420 135 450
+      C95 475 55 510 15 560
+    "/>
+
+    <!-- Axon collateral 1 -->
+    <path d="
+      M245 370
+      C215 360 185 345 150 325
+      C125 310 105 285 90 260
+    "/>
+
+    <!-- Axon collateral 2 -->
+    <path d="
+      M185 415
+      C175 450 160 480 135 510
+      C115 535 95 550 70 570
+    "/>
+
+    <!-- Axon collateral 3 -->
+    <path d="
+      M115 465
+      C95 450 75 435 45 430
+    "/>
+
+  </g>
+
+  <!-- AXON TERMINALS -->
+  <g fill="#F4EFE6" stroke="none" opacity=".85">
+
+    <circle cx="15" cy="560" r="3"/>
+    <circle cx="90" cy="260" r="2.5"/>
+    <circle cx="70" cy="570" r="2.5"/>
+    <circle cx="45" cy="430" r="2.5"/>
+
+  </g>
+
+</svg>
+
+  </div> <!-- End of .visual (animation) -->
+
+  <!-- Institutional affiliation -->
+  <div class="affiliation-block">
+    <span>Icahn School of Medicine at Mount Sinai</span>
+  </div>
+
+</div> <!-- End of .hero-visual-wrapper -->
+
 </main>
+
 
 <section id="research" class="light section-pad">
   <div class="container">
     <h2>Our Research</h2>
     <div class="tiles">
       <article class="tile"><h3>Molecular</h3><p>Mapping the molecular programs that drive vulnerability and resilience using integrative epigenomic and transcriptomic profiling.</p></article>
-      <article class="tile"><h3>Behavior & Physiology</h3><p>DLinking gene-regulatory networks to neuronal physiology and behavior to identify mechanisms and targets for intervention.</p></article>
+      <article class="tile"><h3>Behavior & Physiology</h3><p>Linking gene-regulatory networks to neuronal physiology and behavior to identify mechanisms and targets for intervention.</p></article>
       <article class="tile"><h3>Computational</h3><p>Building computational frameworks to extract structure, meaning, and predictive insight from large-scale omic and behavioral data.</p></article>
     </div>
   </div>
@@ -378,13 +334,27 @@ footer{background:#0a1523;color:#ddd6c5;padding:32px 0}
 
 <section id="people" class="light section-pad">
   <div class="container">
-    <h2>People</h2>
+
+    <div class="people-heading">
+      <div>
+        <span class="people-kicker">THE TEAM</span>
+        <h2>Meet Our People</h2>
+        <p>The scientists behind our research.</p>
+      </div>
+
+      <a href="people.html" class="people-all-link">
+        Meet the Full Team ↗
+      </a>
+    </div>
+
+    <!-- Cards generated automatically from JSON -->
     <div id="people-grid" class="people-grid"></div>
+
   </div>
 </section>
 
 <footer>
-  <div class="container">© <span id="y"></span> NeuroLab</div>
+  <div class="container">© <span id="y"></span> The Hufnagel Lab</div>
 </footer>
 
 <script>
@@ -409,8 +379,40 @@ document.getElementById('y').textContent = new Date().getFullYear();
       a.x+=a.vx; a.y+=a.vy;
       if(a.x<0||a.x>w) a.vx*=-1;
       if(a.y<0||a.y>h) a.vy*=-1;
-      x.beginPath(); x.arc(a.x,a.y,1.6,0,Math.PI*2);
-      x.fillStyle='rgba(241,204,125,.85)'; x.fill();
+      // Soft golden glow
+x.save();
+
+x.shadowBlur = 12;
+x.shadowColor = 'rgba(241,204,125,0.8)';
+
+// Bright star center
+x.beginPath();
+x.arc(a.x, a.y, 1.6, 0, Math.PI * 2);
+x.fillStyle = 'rgba(244,239,230,0.95)';
+x.fill();
+
+x.restore();
+      // Outer diffuse glow
+x.save();
+
+x.shadowBlur = 20;
+x.shadowColor = 'rgba(241,204,125,0.35)';
+
+x.beginPath();
+x.arc(a.x, a.y, 2.2, 0, Math.PI * 2);
+x.fillStyle = 'rgba(241,204,125,0.15)';
+x.fill();
+
+// Inner glow
+x.shadowBlur = 8;
+x.shadowColor = 'rgba(241,204,125,0.9)';
+
+x.beginPath();
+x.arc(a.x, a.y, 1.6, 0, Math.PI * 2);
+x.fillStyle = 'rgba(244,239,230,0.95)';
+x.fill();
+
+x.restore();
     });
     x.strokeStyle='rgba(241,204,125,.24)';
     for(let i=0;i<N;i++) for(let j=i+1;j<N;j++){
@@ -465,26 +467,340 @@ document.getElementById('y').textContent = new Date().getFullYear();
     });
   }
 
-  // People grid (with graceful fallback)
-  const grid=document.getElementById('people-grid');
-  if(grid){
-    grid.innerHTML='';
-    const ppl=(Array.isArray(data.people)&&data.people.length)? data.people
-      : [{name:'Daniel da Silva',role:'PI',email:'daniel.dasilva@mssm.edu',bio:'Systems neuroscience.'}];
-    ppl.forEach(p=>{
-      const card=document.createElement('article'); card.className='tile';
-      card.innerHTML=`<div style="display:flex;gap:14px;align-items:center">
-          <img src="${avatarSrc(p,88)}" alt="${p.name||''}" width="88" height="88"
-               style="width:88px;height:88px;border-radius:14px;object-fit:cover;border:1px solid #e7e2d8"/>
-          <div><h3 style="margin:0">${p.name||''}</h3>
-              <div style="color:#3f4550">${p.role||''}</div>
-              ${p.email?`<a href="mailto:${p.email}" style="color:#6a5320">${p.email}</a>`:''}
-          </div>
-        </div>
-        ${p.bio?`<p style="margin:12px 0 0; color:#3f4550">${p.bio}</p>`:''}`;
-      grid.appendChild(card);
-    });
-  }
+// ==========================================
+// PEOPLE CARDS — FROM lab_data.json
+// ==========================================
+
+const grid = document.getElementById('people-grid');
+
+if (grid) {
+
+  grid.innerHTML = '';
+
+  const people = Array.isArray(data.people)
+    ? data.people
+    : [];
+
+  const currentMembers = people
+    .filter(p => {
+      const active = String(p.active ?? 'true')
+        .trim()
+        .toLowerCase();
+
+      const group = String(p.group || '')
+        .trim()
+        .toLowerCase();
+
+      return !['false', 'no', '0'].includes(active)
+        && group !== 'alumni';
+    })
+    .sort((a, b) =>
+      (Number(a.order) || 999) -
+      (Number(b.order) || 999)
+    );
+
+  currentMembers.forEach(person => {
+
+    const card = document.createElement('article');
+    card.className = 'home-person-card';
+
+    // Photo or generated initials
+    const photo = document.createElement('img');
+    photo.className = 'home-person-photo';
+    photo.src = avatarSrc(person, 320);
+    photo.alt = person.name || '';
+
+    // Content
+    const content = document.createElement('div');
+    content.className = 'home-person-content';
+
+    const role = document.createElement('div');
+    role.className = 'home-person-role';
+    role.textContent = person.role || '';
+
+    const name = document.createElement('h3');
+    name.className = 'home-person-name';
+    name.textContent = person.name || '';
+
+    const bio = document.createElement('p');
+    bio.className = 'home-person-bio';
+    bio.textContent =
+      person.short_bio || person.bio || '';
+
+    const link = document.createElement('a');
+    link.className = 'home-person-link';
+
+// All profiles are displayed on people.html
+link.href = 'people.html';
+link.textContent = 'Meet the Team ↗';
+
+    content.append(role, name, bio, link);
+    card.append(photo, content);
+    grid.appendChild(card);
+
+  });
+
+}
+
+// Close the asynchronous data-loading function
+})();
+</script>
+<script>
+(function () {
+
+    const canvas = document.getElementById('code-stream');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+
+    // Realistic R analysis sequences
+    const analyses = [
+
+        [
+            '> library(Seurat)',
+            '> obj <- NormalizeData(obj)',
+            '> obj <- FindVariableFeatures(obj)',
+            '> obj <- RunPCA(obj)',
+            '> obj <- RunUMAP(obj, dims=1:30)',
+            '> DimPlot(obj, group.by="celltype")'
+        ],
+
+        [
+            '> library(DESeq2)',
+            '> dds <- DESeq(dds)',
+            '> res <- results(dds)',
+            '> res <- res[order(res$padj),]',
+            '> sum(res$padj < 0.05)',
+            '[1] 138'
+        ],
+
+        [
+            '> library(ggplot2)',
+            '> ggplot(df, aes(x, y)) +',
+            '+ geom_point(alpha=0.5) +',
+            '+ geom_smooth(method="lm")',
+            '> cor.test(df$x, df$y)',
+            'p-value < 0.001'
+        ],
+
+        [
+            '> library(SingleCellExperiment)',
+            '> sce <- logNormCounts(sce)',
+            '> sce <- runPCA(sce)',
+            '> sce <- runUMAP(sce)',
+            '> plotReducedDim(sce, "UMAP")'
+        ]
+
+    ];
+
+    let W = 0;
+    let H = 0;
+
+    let analysisIndex = 0;
+    let lineIndex = 0;
+    let charIndex = 0;
+
+    let phase = 'typing';
+    let phaseStart = 0;
+    let lastCharTime = 0;
+
+    let opacity = 1;
+
+    const FONT_SIZE = 11;
+    const LINE_HEIGHT = 19;
+
+    const X = 0;
+    const Y = 0;
+
+    // Milliseconds per character
+    const TYPE_SPEED = 55;
+
+    // Time to display completed code
+    const HOLD_TIME = 2600;
+
+    // Fade duration
+    const FADE_TIME = 1500;
+
+    const RIGHT_MARGIN = 18;
+const BOTTOM_MARGIN = 22;
+
+function getCodePosition() {
+    const lines = analyses[analysisIndex];
+
+    ctx.font = `${FONT_SIZE}px monospace`;
+
+    const maxWidth = Math.max(
+        ...lines.map(line => ctx.measureText(line).width)
+    );
+
+    return {
+        x: Math.max(12, W - maxWidth - RIGHT_MARGIN),
+        y: Math.max(12, H - lines.length * LINE_HEIGHT - BOTTOM_MARGIN)
+    };
+}
+
+    function resize() {
+
+        const rect = canvas.getBoundingClientRect();
+
+        W = rect.width;
+        H = rect.height;
+
+        const dpr = window.devicePixelRatio || 1;
+
+        canvas.width = Math.round(W * dpr);
+        canvas.height = Math.round(H * dpr);
+
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function reset(time) {
+
+        analysisIndex = (analysisIndex + 1) % analyses.length;
+
+        lineIndex = 0;
+        charIndex = 0;
+
+        opacity = 1;
+
+        phase = 'typing';
+        lastCharTime = time;
+    }
+
+    function animate(time) {
+
+        ctx.clearRect(0, 0, W, H);
+
+        const lines = analyses[analysisIndex];
+
+        // -----------------------------
+        // TYPING
+        // -----------------------------
+
+        if (phase === 'typing') {
+
+            if (time - lastCharTime >= TYPE_SPEED) {
+
+                charIndex++;
+
+                lastCharTime = time;
+
+                if (charIndex > lines[lineIndex].length) {
+
+                    lineIndex++;
+                    charIndex = 0;
+
+                    if (lineIndex >= lines.length) {
+
+                        phase = 'holding';
+                        phaseStart = time;
+                    }
+                }
+            }
+        }
+
+        // -----------------------------
+        // HOLD
+        // -----------------------------
+
+        else if (phase === 'holding') {
+
+            if (time - phaseStart > HOLD_TIME) {
+
+                phase = 'fading';
+                phaseStart = time;
+            }
+        }
+
+        // -----------------------------
+        // FADE
+        // -----------------------------
+
+        else if (phase === 'fading') {
+
+            opacity = Math.max(
+                0,
+                1 - (time - phaseStart) / FADE_TIME
+            );
+
+            if (opacity <= 0) {
+                reset(time);
+            }
+        }
+
+        // -----------------------------
+        // DRAW CODE
+        // -----------------------------
+const { x: codeX, y: codeY } = getCodePosition();
+        ctx.font = `${FONT_SIZE}px monospace`;
+        ctx.textBaseline = 'top';
+
+ctx.fillStyle =
+    `rgba(244,239,230,${0.65 * opacity})`;
+
+        const visibleLines =
+            phase === 'typing'
+                ? lineIndex + 1
+                : lines.length;
+
+                ctx.shadowColor = 'rgba(244,239,230,0.35)';
+ctx.shadowBlur = 4;
+
+        for (let i = 0; i < visibleLines; i++) {
+
+            if (i >= lines.length) break;
+
+            const text =
+                phase === 'typing' && i === lineIndex
+                    ? lines[i].slice(0, charIndex)
+                    : lines[i];
+
+ctx.fillText(
+    text,
+    codeX,
+    codeY + i * LINE_HEIGHT
+);
+        }
+
+        ctx.shadowBlur = 0;
+
+        // -----------------------------
+// SINGLE BLINKING CURSOR
+// -----------------------------
+
+if (phase === 'typing' && lineIndex < lines.length) {
+
+    const currentText =
+        lines[lineIndex].slice(0, charIndex);
+
+    const cursorX =
+        codeX + ctx.measureText(currentText).width + 3;
+
+    const cursorY =
+        codeY + lineIndex * LINE_HEIGHT;
+
+    if (Math.floor(time / 500) % 2 === 0) {
+
+        ctx.fillStyle =
+            `rgba(244,239,230,${0.8 * opacity})`;
+
+        ctx.fillRect(
+            cursorX,
+            cursorY,
+            1.5,
+            FONT_SIZE
+        );
+    }
+}
+
+        requestAnimationFrame(animate);
+    }
+
+    window.addEventListener('resize', resize);
+
+    resize();
+    requestAnimationFrame(animate);
+
 })();
 </script>
 </body>
