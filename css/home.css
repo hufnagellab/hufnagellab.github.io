@@ -206,15 +206,13 @@
 
   display: block;
 
-  opacity: 0.85;
+  opacity: 1;
 
   pointer-events: none;
 
   z-index: 3;
 
-  filter:
-    drop-shadow(0 0 5px rgba(244, 239, 230, 0.55))
-    drop-shadow(0 0 12px rgba(244, 239, 230, 0.25));
+  filter:none;
 }
 
 
@@ -614,4 +612,41 @@ section.light {
     height: 20px;
   }
 
+}
+
+/* =====================================================
+   17. NEURONAL CALCIUM ACTIVITY
+   Controlled by JavaScript
+   ===================================================== */
+
+/* Resting appearance */
+
+#neuron .calcium-neuron {
+  opacity: 0.85;
+}
+
+/* Resting soma */
+
+#neuron .calcium-neuron .soma {
+  fill: #F4EFE6;
+  fill-opacity: 0.18;
+  stroke: none;
+}
+
+/* Calcium fluorescence halo */
+
+#neuron .calcium-glow {
+  fill: #F4EFE6;
+  fill-opacity: 0;
+  stroke: none;
+
+  pointer-events: none;
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  #neuron .calcium-neuron {
+    filter: none !important;
+  }
 }
