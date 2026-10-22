@@ -1,0 +1,504 @@
+/* =====================================================
+   HUFNAGEL LAB — PROJECTS PAGE
+   Uses shared.css for navigation, typography and footer
+   ===================================================== */
+
+
+/* =====================================================
+   PAGE INTRO
+   ===================================================== */
+
+.projects-page .page-intro {
+  background:
+    radial-gradient(
+      ellipse at 85% 10%,
+      rgba(205, 175, 115, 0.08),
+      transparent 45%
+    ),
+    linear-gradient(
+      125deg,
+      #101e30 0%,
+      #17283b 55%,
+      #0b1929 100%
+    );
+
+  padding: 100px 0 110px;
+}
+
+.projects-page .page-intro .container {
+  max-width: 1120px;
+}
+
+.projects-page .eyebrow {
+  color: #c9a463;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.projects-page .page-intro h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(52px, 6vw, 88px);
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  color: #f4efe5;
+  margin: 0 0 30px;
+}
+
+.projects-page .gold-period {
+  color: #c9a463;
+}
+
+.projects-page .intro-lead {
+  max-width: 790px;
+  color: #c5cbd1;
+  font-size: 18px;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.projects-page .gold-line {
+  width: 72px;
+  height: 3px;
+  background: #c9a463;
+  margin-top: 40px;
+}
+
+
+/* =====================================================
+   PROJECT SECTIONS
+   ===================================================== */
+
+.projects-page .project {
+  padding: 100px 0 110px;
+  color: #142237;
+}
+
+/* Project 01 — warm cream */
+
+.projects-page .human-project {
+  background: #f5f1e7;
+}
+
+/* Project 02 — slightly darker cream */
+
+.projects-page .mouse-project {
+  background: #ece8df;
+  border-top: 1px solid rgba(20, 34, 55, 0.08);
+}
+
+
+/* =====================================================
+   PROJECT CONTENT CONTAINER
+   ===================================================== */
+
+body.projects-page .project > .container {
+  position: relative;
+  box-sizing: border-box;
+
+  /*
+   * Preserve the shared container's right padding.
+   * Reserve additional space on the left for the accent.
+   */
+  padding-left: 48px;
+}
+
+
+/* =====================================================
+   VERTICAL NAVY ACCENT BAR
+   ===================================================== */
+
+body.projects-page .project > .container::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 12px;
+
+  width: 4px;
+
+  background: #243b50;
+  border-radius: 2px;
+
+  pointer-events: none;
+}
+
+/* Hide previously added HTML accent element */
+
+body.projects-page .project-accent-bar {
+  display: none;
+}
+
+
+/* =====================================================
+   SECTION LABELS
+   ===================================================== */
+
+.projects-page .section-topline {
+  margin-bottom: 22px;
+}
+
+.projects-page .section-number {
+  color: #a6844c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.projects-page .project-head {
+  margin-bottom: 24px;
+}
+
+.projects-page .project-tag {
+  display: inline-block;
+  color: #657184;
+  font-size: 13px;
+  letter-spacing: 0.025em;
+}
+
+
+/* =====================================================
+   PROJECT TITLES
+   ===================================================== */
+
+.projects-page .project .section-heading {
+  max-width: 1050px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 3.2vw, 48px);
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: -0.025em;
+
+  color: #142237;
+
+  margin: 0 0 24px;
+}
+
+.projects-page .project .section-heading span {
+  color: #967440;
+}
+
+.projects-page .project-lead {
+  max-width: 820px;
+
+  font-size: 19px;
+  line-height: 1.75;
+  color: #526073;
+
+  margin: 0 0 48px;
+}
+
+
+/* =====================================================
+   GRAPHICAL ABSTRACTS
+   ===================================================== */
+
+.projects-page .figure-wrap {
+  width: 100%;
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(20, 34, 55, 0.10);
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 35px rgba(20, 34, 55, 0.045);
+
+  margin-bottom: 48px;
+}
+
+.projects-page .figure-scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.projects-page .figure-scroll img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* =====================================================
+   PROJECT DESCRIPTION + RESEARCH FOCUS
+   ===================================================== */
+
+.projects-page .project-bottom {
+  display: grid;
+
+  /*
+   * Flexible description column.
+   * Fixed-width Research Focus column.
+   */
+  grid-template-columns:
+    minmax(0, 1fr)
+    280px;
+
+  column-gap: 55px;
+
+  align-items: start;
+
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   PROJECT DESCRIPTION
+   ===================================================== */
+
+.projects-page .project-bottom > p {
+  color: #364356;
+
+  font-size: 16px;
+  line-height: 1.95;
+
+  margin: 0;
+  padding: 0;
+
+  min-width: 0;
+}
+
+
+/* =====================================================
+   RESEARCH FOCUS
+   ===================================================== */
+
+.projects-page .project-bottom .focus {
+  /*
+   * Occupy the complete right-hand grid column.
+   * The column's right edge matches the figure's.
+   */
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+  justify-self: stretch;
+
+  text-align: right;
+
+  /*
+   * Keep the gold divider on the left.
+   * No right padding, so the text aligns
+   * exactly with the graphical abstract.
+   */
+  border-left: 2px solid #c9a463;
+  border-right: none;
+
+  padding: 0 0 0 25px;
+
+  gap: 15px;
+}
+
+.projects-page .focus-label {
+  color: #a6844c;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  margin-bottom: 5px;
+}
+
+.projects-page .focus span:not(.focus-label) {
+  color: #27384b;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   CLOSING STATEMENT
+   ===================================================== */
+
+.projects-page .closing {
+  background: #142237;
+
+  padding: 85px 0;
+
+  text-align: center;
+}
+
+.projects-page .closing-star {
+  display: block;
+
+  color: #c9a463;
+
+  font-size: 28px;
+
+  margin-bottom: 24px;
+}
+
+.projects-page .closing p {
+  color: #d5dbe0;
+
+  font-size: 19px;
+  line-height: 1.8;
+
+  margin: 0;
+}
+
+.projects-page .closing strong {
+  color: #f4efe5;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(23px, 3vw, 34px);
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   TABLET — MAX 900px
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+  .projects-page .project {
+    padding: 75px 0;
+  }
+
+  /* Accent bar */
+
+  body.projects-page .project > .container {
+    padding-left: 38px;
+  }
+
+  body.projects-page .project > .container::before {
+    left: 10px;
+    width: 4px;
+  }
+
+  /* Stack description and research focus */
+
+  .projects-page .project-bottom {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 35px;
+  }
+
+  /* Research Focus becomes left-aligned */
+
+  .projects-page .project-bottom .focus {
+    width: 100%;
+    max-width: 500px;
+
+    justify-self: start;
+    align-items: flex-start;
+
+    text-align: left;
+
+    border-left: 2px solid #c9a463;
+    border-right: none;
+
+    padding: 0 0 0 25px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE — MAX 600px
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  /* Hero */
+
+  .projects-page .page-intro {
+    padding: 75px 0 85px;
+  }
+
+  .projects-page .page-intro h1 {
+    font-size: clamp(42px, 11vw, 60px);
+  }
+
+  .projects-page .intro-lead {
+    font-size: 16px;
+  }
+
+  /* Project sections */
+
+  .projects-page .project {
+    padding: 65px 0;
+  }
+
+  /* Accent bar */
+
+  body.projects-page .project > .container {
+    padding-left: 28px;
+  }
+
+  body.projects-page .project > .container::before {
+    left: 6px;
+    width: 3px;
+  }
+
+  /* Titles */
+
+  .projects-page .project .section-heading {
+    font-size: 34px;
+  }
+
+  .projects-page .project-lead {
+    font-size: 17px;
+    margin-bottom: 35px;
+  }
+
+  /* Graphical abstracts */
+
+  .projects-page .figure-scroll img {
+    width: auto;
+    max-width: none;
+    min-width: 850px;
+    height: auto;
+  }
+
+  .projects-page .figure-wrap {
+    margin-bottom: 35px;
+  }
+
+  /* Description */
+
+  .projects-page .project-bottom > p {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  /* Research Focus */
+
+  .projects-page .project-bottom .focus {
+    gap: 12px;
+    padding-left: 20px;
+  }
+
+  /* Closing */
+
+  .projects-page .closing {
+    padding: 65px 0;
+  }
+
+}

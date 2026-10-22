@@ -1,265 +1,1096 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Join Us | Hufnagel Lab</title>
+
+  <meta name="description"
+        content="Explore research opportunities at the Hufnagel Lab, Icahn School of Medicine at Mount Sinai. Join our team investigating the neuroscience of alcohol use disorder, individual vulnerability, and compulsive alcohol drinking.">
+
+  <link rel="canonical"
+        href="https://www.hufnagellab.org/joinus.html">
+
+  <meta name="theme-color" content="#101e30">
+
+  <link rel="stylesheet" href="css/shared.css">
+
+  <!-- ==========================================
+       STRUCTURED DATA
+  =========================================== -->
+
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-
-    /* =============================
-       1. JOIN US PAGE
-       ============================= */
-    {
-      "@type": "WebPage",
-      "@id": "https://www.dasilvalab.org/joinus.html#webpage",
-      "url": "https://www.dasilvalab.org/joinus.html",
-      "name": "Join Us — da Silva Lab",
-      "isPartOf": {
-        "@id": "https://www.dasilvalab.org/#website"
-      },
-      "description": "Open positions in the da Silva Lab, including postdoctoral, graduate, and research scientist opportunities.",
-      "breadcrumb": {
-        "@id": "https://www.dasilvalab.org/joinus.html#breadcrumb"
-      },
-      "about": {
-        "@id": "https://www.dasilvalab.org/#lab"
-      }
-    },
-
-    /* =============================
-       2. JOB POSTING — BIOINFORMATICS RESEARCH SCIENTIST
-       ============================= */
-    {
-      "@type": "JobPosting",
-      "@id": "https://www.dasilvalab.org/joinus.html#bioinfojob",
-      "title": "Bioinformatics Research Scientist",
-      "description": "The da Silva Lab is seeking a Bioinformatics Research Scientist to help build our new laboratory in São Paulo and develop multi-omic and computational tools to understand vulnerability and resilience in psychiatric disorders.",
-      "datePosted": "2025-01-01",
-      "employmentType": "FULL_TIME",
-      "applicantLocationRequirements": "BR",
-      "hiringOrganization": {
-        "@id": "https://www.dasilvalab.org/#lab"
-      },
-      "jobLocation": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "São Paulo",
-          "addressRegion": "SP",
-          "addressCountry": "Brazil"
-        }
-      },
-      "qualifications": [
-        "PhD and postdoctoral experience including international training",
-        "Functional proficiency in English",
-        "Experience in bioinformatics and omic data analysis",
-        "Intermediate experience in R"
-      ],
-      "educationRequirements": "PhD",
-      "industry": "Neuroscience, Omics, Computational Biology",
-      "directApply": false,
-      "identifier": {
-        "@type": "PropertyValue",
-        "name": "da Silva Lab",
-        "value": "BioinformaticsResearchScientist2025"
-      }
-    },
-
-    /* =============================
-       3. BREADCRUMBS
-       ============================= */
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.dasilvalab.org/joinus.html#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.dasilvalab.org"
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.hufnagellab.org/joinus.html#webpage",
+        "url": "https://www.hufnagellab.org/joinus.html",
+        "name": "Join Us | Hufnagel Lab",
+        "description": "Research and career opportunities at the Hufnagel Lab at the Icahn School of Medicine at Mount Sinai.",
+        "isPartOf": {
+          "@id": "https://www.hufnagellab.org/#website"
         },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Join Us",
-          "item": "https://www.dasilvalab.org/joinus.html"
+        "breadcrumb": {
+          "@id": "https://www.hufnagellab.org/joinus.html#breadcrumb"
         }
-      ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.hufnagellab.org/joinus.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.hufnagellab.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Join Us",
+            "item": "https://www.hufnagellab.org/joinus.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+
+  <style>
+
+    /* =====================================================
+       HUFNAGEL LAB — JOIN US PAGE
+       ===================================================== */
+
+    .joinus-page {
+      background: #f5f1e7;
+      color: #142237;
     }
 
-  ]
-}
-</script>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Join Us — da Silva lab</title>
-<meta name="theme-color" content="#0e1a2b"/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-<style>
-:root{--navy:#0e1a2b;--navy-2:#0a1523;--gold:#d3a85a;--cream:#f4efe6;--ink:#0f243a}
-*{box-sizing:border-box}
-body{margin:0;background:var(--navy);color:#f7f7f5;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.6}
-.container{width:min(1150px,92vw);margin:0 auto}
+    /* =====================================================
+       HERO
+       ===================================================== */
 
-/* Header */
-header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(160%) blur(8px);
-background:linear-gradient(180deg, rgba(10,18,31,.85), rgba(10,18,31,.65));
-border-bottom:1px solid rgba(211,168,90,.18)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
-.brand{display:flex;align-items:center;gap:12px;font-weight:700;color:#fff;text-decoration:none}
-.brand:hover{color:var(--gold)}
-.brand-icon{width:28px;height:28px;border-radius:8px;
-background:radial-gradient(80% 80% at 30% 30%, var(--gold), #a1762b 70%, #6d5326 100%)}
-nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}
-nav a{text-decoration:none;color:#fff;opacity:.9}
-nav a:hover{opacity:1;color:var(--gold)}
+    .joinus-page .page-intro {
+      background:
+        radial-gradient(
+          ellipse at 85% 10%,
+          rgba(205,175,115,0.08),
+          transparent 45%
+        ),
+        linear-gradient(
+          125deg,
+          #101e30 0%,
+          #17283b 55%,
+          #0b1929 100%
+        );
 
-/* Hero */
-.hero{position:relative;overflow:hidden}
-.hero::before {
-    background:linear-gradient(90deg, rgba(14,26,43,0.75) 0%, rgba(14,26,43,0.0) 60%);
-}
-.hero-inner{display:grid;grid-template-columns:1fr;align-items:center;padding:clamp(20px,1vw,20px) 0;text-align:center}
+      padding: 100px 0 110px;
+    }
 
-#openings.section {
-  padding-top: 0;
-}
+    .joinus-page .page-intro .container {
+      max-width: 1120px;
+    }
 
-h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.4rem);color:#fff;margin:0.3em 0}
-.lead{max-width:60ch;margin:0 auto 1.5em;color:rgba(255,255,255,0.88);font-size:1.1rem}
-.cta{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:999px;border:1px solid rgba(241,204,125,0.6);
-background:linear-gradient(180deg, rgba(241,204,125,0.18), rgba(211,168,90,0.1));color:var(--gold);
-font-weight:600;text-decoration:none;transition:all .25s ease}
-.cta:hover{background:rgba(241,204,125,0.22);box-shadow:0 0 12px rgba(241,204,125,0.35);color:#fff;transform:translateY(-1px)}
+    .joinus-page .eyebrow {
+      color: #c9a463;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
 
-/* Section layouts */
-.section{padding:80px 0;position:relative;z-index:1}
-.section.light{background:var(--cream);color:#111}
-.section.dark{background:linear-gradient(180deg,#0e1a2b,#0b1c2d);color:#eee}
-h2{font-family:Playfair Display,serif;font-size:2rem;margin-bottom:0.6em;color:var(--ink)}
-.dark h2{color:#f4efe6}
-.columns{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;align-items:start}
-.columns p{margin-top:0}
-ul.custom{list-style:none;padding-left:0;margin:1em 0}
-ul.custom li::before{content:"•";color:var(--gold);margin-right:10px}
-@media(max-width:850px){.columns{grid-template-columns:1fr;text-align:center}}
+    .joinus-page .page-intro h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(52px, 6vw, 88px);
+      line-height: 1.08;
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      color: #f4efe5;
+      margin: 0 0 30px;
+    }
 
-footer{background:#0a1523;color:#ddd6c5;padding:32px 0;text-align:center}
-</style>
+    .joinus-page .gold-period {
+      color: #c9a463;
+    }
+
+    .joinus-page .intro-lead {
+      max-width: 790px;
+      color: #c5cbd1;
+      font-size: 18px;
+      line-height: 1.85;
+      margin: 0;
+    }
+
+    .joinus-page .gold-line {
+      width: 72px;
+      height: 3px;
+      background: #c9a463;
+      margin-top: 40px;
+    }
+
+
+    /* =====================================================
+       SHARED SECTION STYLES
+       ===================================================== */
+
+    .joinus-page .join-section {
+      padding: 95px 0 105px;
+    }
+
+    .joinus-page .section-number {
+      display: block;
+      color: #a6844c;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .joinus-page .section-heading {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 3.2vw, 48px);
+      font-weight: 700;
+      line-height: 1.17;
+      letter-spacing: -0.025em;
+      color: #142237;
+      margin: 0 0 25px;
+    }
+
+    .joinus-page .section-heading span {
+      color: #967440;
+    }
+
+    .joinus-page .section-description {
+      max-width: 800px;
+      font-size: 17px;
+      line-height: 1.85;
+      color: #526073;
+      margin: 0 0 45px;
+    }
+
+
+    /* =====================================================
+       OPEN POSITIONS
+       ===================================================== */
+
+    .joinus-page .openings-section {
+      background: #f5f1e7;
+    }
+
+    .joinus-page .position-card {
+      position: relative;
+
+      background: #fffdf8;
+
+      border: 1px solid rgba(20,34,55,0.10);
+      border-radius: 8px;
+
+      padding: 45px 50px;
+
+      box-shadow:
+        0 12px 35px rgba(20,34,55,0.035);
+    }
+
+    .joinus-page .position-card::before {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      top: 0;
+      bottom: 0;
+
+      width: 4px;
+
+      background: #243b50;
+
+      border-radius: 8px 0 0 8px;
+    }
+
+    .joinus-page .position-topline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 22px;
+    }
+
+    .joinus-page .position-type {
+      color: #a6844c;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .joinus-page .position-location {
+      color: #657184;
+      font-size: 13px;
+    }
+
+    .joinus-page .position-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(26px, 2.7vw, 36px);
+      line-height: 1.2;
+      color: #142237;
+      margin: 0 0 22px;
+    }
+
+    .joinus-page .position-intro {
+      max-width: 900px;
+      color: #364356;
+      font-size: 16px;
+      line-height: 1.9;
+      margin: 0 0 35px;
+    }
+
+    .joinus-page .position-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      margin-bottom: 35px;
+    }
+
+    .joinus-page .position-details h4 {
+      color: #142237;
+      font-size: 15px;
+      font-weight: 700;
+      margin: 0 0 20px;
+    }
+
+    .joinus-page .position-details ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .joinus-page .position-details li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 13px;
+
+      color: #526073;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .joinus-page .position-details li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #a6844c;
+      font-weight: 700;
+    }
+
+    .joinus-page .position-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+
+      border-top: 1px solid rgba(20,34,55,0.10);
+      padding-top: 30px;
+    }
+
+    .joinus-page .position-meta {
+      color: #657184;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .joinus-page .position-meta strong {
+      color: #142237;
+    }
+
+
+    /* =====================================================
+       BUTTONS
+       ===================================================== */
+
+    .joinus-page .button-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+
+      padding: 14px 26px;
+
+      background: #142237;
+      color: #f4efe5;
+
+      border: 1px solid #142237;
+      border-radius: 4px;
+
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+
+      text-decoration: none;
+
+      transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .joinus-page .button-primary:hover {
+      background: #243b50;
+      transform: translateY(-2px);
+    }
+
+
+    /* =====================================================
+       LAB CULTURE
+       ===================================================== */
+
+    .joinus-page .culture-section {
+      background: #ece8df;
+
+      border-top: 1px solid rgba(20,34,55,0.08);
+    }
+
+    .joinus-page .culture-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 75px;
+      align-items: start;
+    }
+
+    .joinus-page .culture-text p {
+      color: #364356;
+      font-size: 16px;
+      line-height: 1.95;
+      margin: 0 0 22px;
+    }
+
+    .joinus-page .culture-values {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .joinus-page .value-card {
+      border-top: 2px solid #c9a463;
+      padding-top: 18px;
+    }
+
+    .joinus-page .value-number {
+      display: block;
+
+      color: #a6844c;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+
+      margin-bottom: 12px;
+    }
+
+    .joinus-page .value-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #142237;
+      font-size: 22px;
+      margin: 0 0 12px;
+    }
+
+    .joinus-page .value-card p {
+      color: #526073;
+      font-size: 14px;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+
+    /* =====================================================
+       ADDITIONAL OPPORTUNITIES
+       ===================================================== */
+
+    .joinus-page .opportunities-section {
+      background: #f5f1e7;
+    }
+
+    .joinus-page .opportunities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .joinus-page .opportunity-card {
+      background: #fffdf8;
+
+      border: 1px solid rgba(20,34,55,0.10);
+      border-radius: 6px;
+
+      padding: 30px;
+
+      transition: transform 0.25s ease;
+    }
+
+    .joinus-page .opportunity-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .joinus-page .opportunity-number {
+      color: #a6844c;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+    }
+
+    .joinus-page .opportunity-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+      color: #142237;
+      margin: 20px 0 15px;
+    }
+
+    .joinus-page .opportunity-card p {
+      color: #526073;
+      font-size: 14px;
+      line-height: 1.85;
+      margin: 0;
+    }
+
+
+    /* =====================================================
+       CONTACT SECTION
+       ===================================================== */
+
+    .joinus-page .contact-section {
+      background: #142237;
+      padding: 90px 0;
+      text-align: center;
+    }
+
+    .joinus-page .contact-section .section-heading {
+      color: #f4efe5;
+    }
+
+    .joinus-page .contact-section p {
+      max-width: 720px;
+      margin: 0 auto 35px;
+
+      color: #c5cbd1;
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    .joinus-page .contact-section .button-primary {
+      background: #c9a463;
+      color: #142237;
+      border-color: #c9a463;
+    }
+
+    .joinus-page .contact-section .button-primary:hover {
+      background: #dfbd7f;
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .joinus-page .join-section {
+        padding: 75px 0;
+      }
+
+      .joinus-page .position-details,
+      .joinus-page .culture-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .joinus-page .opportunities-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .joinus-page .page-intro {
+        padding: 75px 0 85px;
+      }
+
+      .joinus-page .page-intro h1 {
+        font-size: clamp(42px, 11vw, 60px);
+      }
+
+      .joinus-page .intro-lead {
+        font-size: 16px;
+      }
+
+      .joinus-page .join-section {
+        padding: 65px 0;
+      }
+
+      .joinus-page .position-card {
+        padding: 30px 25px;
+      }
+
+      .joinus-page .position-details {
+        gap: 25px;
+      }
+
+      .joinus-page .culture-values {
+        grid-template-columns: 1fr;
+      }
+
+      .joinus-page .contact-section {
+        padding: 65px 0;
+      }
+
+    }
+
+  </style>
+
 </head>
 
-<body>
-<header>
-  <div class="container nav">
-    <a class="brand" href="index.html"><span class="brand-icon"></span><span>da Silva lab</span></a>
-    <nav>
-      <ul>
-        <li><a href="index.html#people">People</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="#">Publications</a></li>
-        <li><a href="index.html#news">News</a></li>
-        <li><a href="joinus.html">Join Us</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
 
-<main class="hero">
-  <div class="container hero-inner">
-    <div>
-      <h1>Join Our Team</h1>
-      <p class="lead">We are always looking for curious, driven scientists who want to bridge molecular neuroscience and data science to uncover how the brain builds resilience.</p>
-      <a class="cta" href="#openings">See Open Positions ▼</a>
+<body class="joinus-page">
+
+  <!-- ==========================================
+       SHARED NAVIGATION
+  =========================================== -->
+
+  <header class="site-header">
+
+    <div class="container nav">
+
+      <a href="index.html" class="logo">
+        Hufnagel<span>Lab</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+
+        <a href="index.html">Home</a>
+
+        <a href="projects.html">Research</a>
+
+        <a href="people.html">People</a>
+
+        <a href="publications.html">Publications</a>
+
+        <a href="joinus.html"
+           class="active"
+           aria-current="page">
+          Join Us
+        </a>
+
+      </nav>
+
     </div>
-  </div>
-</main>
 
-<section id="openings" class="section light">
-  <div class="container">
-    <h2>Open Positions</h2>
-    <!-- Bioinformatics Position -->
-<div class="columns" style="margin-bottom:60px">
-  <div style="grid-column:1 / -1">
-    <h3>Bioinformatics Research Scientist (São Paulo)</h3>
-    <p>
-      The Da Silva Lab is being established at the 
-      <strong>Instituto Israelita de Ensino e Pesquisa Albert Einstein (São Paulo, Brazil)</strong>, 
-      led by Dr. Daniel da Silva (Assistant Professor, Icahn School of Medicine at Mount Sinai).
-    </p>
+  </header>
 
-    <p>
-      We are seeking a <strong>Bioinformatics Research Scientist</strong> to join the group 
-      during this foundational stage and help build our new laboratory in Brazil.
-      Our work integrates neuroscience, multi-omic data, and computational modeling 
-      to understand molecular and epigenetic mechanisms of vulnerability and resilience 
-      in psychiatric disorders.
-    </p>
 
-    <h4>Requirements</h4>
-    <ul class="custom">
-      <li>PhD and postdoctoral experience (including international experience)</li>
-      <li>Functional proficiency in English</li>
-      <li>Basic experience in bioinformatics and omics data analysis</li>
-      <li>Intermediate knowledge in R</li>
-    </ul>
+  <main id="main">
 
-    <h4>Profile</h4>
-    <p>
-      A curious, collaborative scientist passionate about research and eager to grow 
-      scientifically and professionally.
-    </p>
+    <!-- ==========================================
+         PAGE INTRO
+    =========================================== -->
 
-    <p><strong>Location:</strong> São Paulo, SP (Brazil)</p>
+    <section class="page-intro">
 
-    <p>
-      <strong>How to apply:</strong><br>
-      Send your CV, a brief statement of research interests and contact information for 2 references to  
-      <a href="mailto:daniel.dasilva@mssm.edu" style="color:var(--gold);font-weight:600;text-decoration:none">
-        daniel.dasilva@mssm.edu
-      </a>.
-      Applications will be reviewed on a rolling basis.
-    </p>
-  </div>
-</div>
-  </div>
-</section>
+      <div class="container">
 
-<section class="section dark">
-  <div class="container">
-    <h2>Life in the Lab</h2>
-    <div class="columns">
-      <div>
-        <p>Our lab combines rigorous neuroscience with a creative, data-driven mindset. We work collaboratively, value diverse perspectives, and believe that science thrives when curiosity meets purpose.</p>
-        <p>Located at <strong>Instituto Israelita de Ensino e Pesquisa Albert Einstein</strong>, our group benefits from outstanding core facilities and a vibrant neuroscience community spanning molecular, cellular, systems, and computational expertise.</p>
+        <div class="eyebrow">
+          JOIN OUR TEAM
+        </div>
+
+        <h1>
+          Science Starts with People<span class="gold-period">.</span>
+        </h1>
+
+        <p class="intro-lead">
+          We are building a collaborative and intellectually
+          ambitious research environment where curiosity,
+          creativity, and diverse perspectives drive discoveries
+          about the brain and individual vulnerability to
+          alcohol use disorder.
+        </p>
+
+        <div class="gold-line"></div>
+
       </div>
-      <div>
-        <p>Whether you enjoy patch-clamp electrophysiology, coding, imaging neurons,  pharmacology or behavioral neuroscience, you’ll find space to grow here. We support independence, technical mastery, and teamwork equally.</p>
-        <p>We encourage scientists from underrepresented backgrounds to apply and join our mission to decode brain resilience.</p>
+
+    </section>
+
+
+    <!-- ==========================================
+         OPEN POSITIONS
+    =========================================== -->
+
+    <section class="join-section openings-section"
+             id="openings">
+
+      <div class="container">
+
+        <span class="section-number">
+          01 / OPPORTUNITIES
+        </span>
+
+        <h2 class="section-heading">
+          Research <span>Positions</span>
+        </h2>
+
+        <p class="section-description">
+          We welcome motivated researchers interested in
+          understanding how molecular, cellular, and neural
+          circuit mechanisms contribute to individual
+          vulnerability and resilience.
+        </p>
+
+
+        <!-- ASSOCIATE RESEARCHER -->
+
+        <article class="position-card">
+
+          <div class="position-topline">
+
+            <span class="position-type">
+              RESEARCH STAFF
+            </span>
+
+            <span class="position-location">
+              New York, NY · Mount Sinai
+            </span>
+
+          </div>
+
+          <h3 class="position-title">
+            Associate Researcher I — Neuroscience
+          </h3>
+
+          <p class="position-intro">
+            The Hufnagel Lab at the Icahn School of Medicine
+            at Mount Sinai investigates the molecular,
+            cellular, and neural mechanisms underlying
+            individual vulnerability to alcohol use disorder.
+
+            We are seeking a research-oriented individual
+            interested in contributing to experimental
+            studies of alcohol drinking behavior and
+            compulsive-like alcohol use in mouse models.
+          </p>
+
+
+          <div class="position-details">
+
+            <!-- RESPONSIBILITIES -->
+
+            <div>
+
+              <h4>Research Responsibilities</h4>
+
+              <ul>
+
+                <li>
+                  Conduct mouse behavioral experiments,
+                  including alcohol self-administration
+                  and drinking paradigms.
+                </li>
+
+                <li>
+                  Assist with mouse colony management,
+                  animal handling, and experimental monitoring.
+                </li>
+
+                <li>
+                  Perform or assist with stereotaxic
+                  surgeries and experimental procedures.
+                </li>
+
+                <li>
+                  Collect brain tissue for molecular
+                  and cellular analyses.
+                </li>
+
+                <li>
+                  Maintain accurate experimental records
+                  and organized datasets.
+                </li>
+
+                <li>
+                  Contribute to data analysis,
+                  scientific presentations,
+                  and manuscript preparation.
+                </li>
+
+              </ul>
+
+            </div>
+
+
+            <!-- QUALIFICATIONS -->
+
+            <div>
+
+              <h4>Qualifications</h4>
+
+              <ul>
+
+                <li>
+                  Bachelor's or Master's degree
+                  in neuroscience, biology,
+                  or a related scientific discipline.
+                </li>
+
+                <li>
+                  Previous laboratory research experience
+                  is preferred.
+                </li>
+
+                <li>
+                  Experience handling laboratory mice
+                  and conducting behavioral experiments
+                  is highly desirable.
+                </li>
+
+                <li>
+                  Familiarity with rodent behavioral
+                  paradigms or alcohol self-administration
+                  is advantageous.
+                </li>
+
+                <li>
+                  Strong organizational skills,
+                  attention to detail,
+                  and scientific curiosity.
+                </li>
+
+                <li>
+                  Ability to work collaboratively
+                  in an interdisciplinary research environment.
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+
+          <div class="position-footer">
+
+            <div class="position-meta">
+
+              <div>
+                <strong>Institution:</strong>
+                Icahn School of Medicine at Mount Sinai
+              </div>
+
+              <div>
+                <strong>Requisition:</strong>
+                3042799
+              </div>
+
+              <div>
+                <strong>Posted salary range:</strong>
+                $58,661–$78,000 annually
+              </div>
+
+            </div>
+
+
+            <a class="button-primary"
+               href="https://careers.mountsinai.org/jobs/3042799?lang=en-us"
+               target="_blank"
+               rel="noopener noreferrer">
+
+              View Official Listing ↗
+
+            </a>
+
+          </div>
+
+        </article>
+
       </div>
-    </div>
-  </div>
-</section>
 
-<section class="section light">
-  <div class="container" style="text-align:center">
-    <h2>Interested?</h2>
-    <p style="max-width:60ch;margin:0 auto 1.2em">
-      Send your CV, a brief statement of research interests and contact information for 2 references to 
-      <a href="mailto:daniel.dasilva@mssm.edu" style="color:var(--gold);text-decoration:none;font-weight:600">daniel.dasilva@mssm.edu</a>.
-    </p>
-    <a class="cta" href="mailto:daniel.dasilva@mssm.edu">Apply Now ✉</a>
-  </div>
-</section>
+    </section>
 
-<footer>
-  © <span id="y"></span> NeuroLab — da Silva lab
-</footer>
 
-<script>
-document.getElementById('y').textContent = new Date().getFullYear();
-</script>
+    <!-- ==========================================
+         LIFE IN THE LAB
+    =========================================== -->
+
+    <section class="join-section culture-section">
+
+      <div class="container">
+
+        <span class="section-number">
+          02 / OUR CULTURE
+        </span>
+
+        <h2 class="section-heading">
+          Life in the <span>Lab</span>
+        </h2>
+
+
+        <div class="culture-grid">
+
+          <div class="culture-text">
+
+            <p>
+              The Hufnagel Lab brings together experimental
+              neuroscience and computational biology to
+              investigate fundamental questions about
+              individual differences in behavior and
+              susceptibility to psychiatric disorders.
+            </p>
+
+            <p>
+              Our research spans behavioral neuroscience,
+              molecular and cellular biology, transcriptomics,
+              epigenomics, and functional approaches.
+
+              We believe that meaningful discoveries emerge
+              when scientists with complementary expertise
+              challenge assumptions and explore problems
+              from different perspectives.
+            </p>
+
+            <p>
+              We are committed to creating an environment
+              where trainees develop scientific independence,
+              technical expertise, critical thinking,
+              and the confidence to pursue ambitious ideas.
+            </p>
+
+          </div>
+
+
+          <div class="culture-values">
+
+            <div class="value-card">
+
+              <span class="value-number">01</span>
+
+              <h3>Curiosity</h3>
+
+              <p>
+                We encourage asking difficult questions,
+                exploring new ideas, and challenging
+                established assumptions.
+              </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+              <span class="value-number">02</span>
+
+              <h3>Collaboration</h3>
+
+              <p>
+                We value open communication,
+                shared expertise, and scientific
+                progress through teamwork.
+              </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+              <span class="value-number">03</span>
+
+              <h3>Independence</h3>
+
+              <p>
+                We support the development of
+                independent scientists who can
+                define and pursue their own questions.
+              </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+              <span class="value-number">04</span>
+
+              <h3>Belonging</h3>
+
+              <p>
+                We welcome diverse backgrounds,
+                experiences, and perspectives,
+                recognizing their importance
+                to scientific creativity.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         OTHER OPPORTUNITIES
+    =========================================== -->
+
+    <section class="join-section opportunities-section">
+
+      <div class="container">
+
+        <span class="section-number">
+          03 / GROW WITH US
+        </span>
+
+        <h2 class="section-heading">
+          Other <span>Opportunities</span>
+        </h2>
+
+        <p class="section-description">
+          We are interested in connecting with researchers
+          at different career stages whose scientific
+          interests align with our research program.
+        </p>
+
+
+        <div class="opportunities-grid">
+
+          <!-- POSTDOCTORAL -->
+
+          <article class="opportunity-card">
+
+            <span class="opportunity-number">
+              01 / POSTDOCTORAL
+            </span>
+
+            <h3>Postdoctoral Researchers</h3>
+
+            <p>
+              We welcome inquiries from researchers
+              interested in integrating molecular,
+              cellular, systems, and computational
+              neuroscience to investigate
+              alcohol use disorder.
+            </p>
+
+          </article>
+
+
+          <!-- GRADUATE -->
+
+          <article class="opportunity-card">
+
+            <span class="opportunity-number">
+              02 / GRADUATE TRAINING
+            </span>
+
+            <h3>Graduate Students</h3>
+
+            <p>
+              Students interested in our research
+              are encouraged to reach out and
+              explore potential opportunities
+              through Mount Sinai's graduate
+              training programs.
+            </p>
+
+          </article>
+
+
+          <!-- UNDERGRADUATE -->
+
+          <article class="opportunity-card">
+
+            <span class="opportunity-number">
+              03 / EARLY RESEARCH
+            </span>
+
+            <h3>Research Trainees</h3>
+
+            <p>
+              Motivated students and early-career
+              scientists interested in gaining
+              research experience are welcome
+              to inquire about potential
+              training opportunities.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         CONTACT
+    =========================================== -->
+
+    <section class="contact-section">
+
+      <div class="container">
+
+        <span class="section-number">
+          GET IN TOUCH
+        </span>
+
+        <h2 class="section-heading">
+          Interested in Joining Us<span class="gold-period">?</span>
+        </h2>
+
+        <p>
+          We welcome inquiries from scientists who
+          share our enthusiasm for understanding
+          the brain.
+
+          Tell us about your research background,
+          scientific interests, and what motivates
+          you to join our team.
+
+          For formally advertised positions,
+          please also follow the application
+          instructions provided by Mount Sinai.
+        </p>
+
+        <a class="button-primary"
+           href="mailto:daniel.hufnagel@mssm.edu?subject=Research%20Opportunities%20-%20Hufnagel%20Lab">
+
+          Contact the Lab ↗
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ==========================================
+       SHARED FOOTER
+  =========================================== -->
+
+  <div id="site-footer"></div>
+
+
+  <!-- SHARED COMPONENTS -->
+
+  <script src="js/components.js"></script>
+
 </body>
 </html>

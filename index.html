@@ -131,7 +131,7 @@
 </script>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>da Hufnagel lab — Decoding Molecular Signatures in Psychiatric Disorders</title>
+<title>Hufnagel lab — Decoding Molecular Signatures in Psychiatric Disorders</title>
 <meta name="theme-color" content="#0e1a2b"/>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1091,10 +1091,9 @@ if (grid) {
     name.className = 'home-person-name';
     name.textContent = person.name || '';
 
-    const bio = document.createElement('p');
-    bio.className = 'home-person-bio';
-    bio.textContent =
-      person.short_bio || person.bio || '';
+const bio = document.createElement('p');
+bio.className = 'home-person-bio';
+bio.textContent = person.short_bio || '';
 
     const link = document.createElement('a');
     link.className = 'home-person-link';
